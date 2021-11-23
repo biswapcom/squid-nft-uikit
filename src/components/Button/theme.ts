@@ -42,7 +42,7 @@ export const styleVariants = {
     },
   },
   [variants.TERTIARY]: {
-    backgroundColor: "tertiary",
+    backgroundColor: "dark",
     color: "contrast",
     boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
   },
