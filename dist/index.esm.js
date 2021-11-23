@@ -158,11 +158,6 @@ var variants$3 = {
     SECONDARY: "secondary",
     TERTIARY: "tertiary",
     TEXT: "text",
-    DANGER: "danger",
-    SUBTLE: "subtle",
-    SUCCESS: "success",
-    DARK: "dark",
-    PRIMARY_DARK: 'primaryDark'
 };
 
 var _a$4, _b$1;
@@ -174,6 +169,7 @@ var scaleVariants$1 = (_a$4 = {},
     },
     _a$4[scales$5.MD] = {
         height: "48px",
+        fontSize: "16px",
         padding: "0 24px",
     },
     _a$4[scales$5.SM] = {
@@ -190,71 +186,45 @@ var scaleVariants$1 = (_a$4 = {},
 var styleVariants$2 = (_b$1 = {},
     _b$1[variants$3.PRIMARY] = {
         backgroundColor: "primary",
-        color: "white",
+        color: "contrast",
+        boxShadow: "0px 6px 24px rgba(255, 28, 94, 0.32), inset 0px 1px 0.5px #FF4B56, inset 0px -2px 1px #B40034",
     },
     _b$1[variants$3.SECONDARY] = {
-        backgroundColor: "transparent",
-        border: "2px solid",
-        borderColor: "primary",
-        boxShadow: "none",
-        color: "primary",
-        ":disabled": {
-            backgroundColor: "transparent",
-        },
+        backgroundColor: "success",
+        boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
+        color: "contrast",
     },
     _b$1[variants$3.TRANSPARENT] = {
         backgroundColor: "transparent",
-        color: "background",
+        color: "contrast",
         ":disabled": {
             backgroundColor: "transparent",
         },
     },
     _b$1[variants$3.TERTIARY] = {
         backgroundColor: "tertiary",
-        boxShadow: "none",
-        color: "primary",
-    },
-    _b$1[variants$3.SUBTLE] = {
-        backgroundColor: "textSubtle",
-        color: "white",
-    },
-    _b$1[variants$3.DANGER] = {
-        backgroundColor: "failure",
-        color: "white",
-    },
-    _b$1[variants$3.SUCCESS] = {
-        backgroundColor: "success",
-        color: "white",
+        color: "contrast",
+        boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
     },
     _b$1[variants$3.TEXT] = {
         backgroundColor: "transparent",
         color: "primary",
         boxShadow: "none",
     },
-    _b$1[variants$3.DARK] = {
-        backgroundColor: "dark",
-        color: "text",
-        boxShadow: "none",
-    },
-    _b$1[variants$3.PRIMARY_DARK] = {
-        backgroundColor: "inputSecondary",
-        color: "contrast",
-        boxShadow: "none",
-    },
     _b$1);
 
 var getDisabledStyles = function (_a) {
-    var isLoading = _a.isLoading, theme = _a.theme;
+    var isLoading = _a.isLoading; _a.theme;
     if (isLoading === true) {
         return "\n      &:disabled,\n      &.biswap-button--disabled {\n        cursor: not-allowed;\n      }\n    ";
     }
-    return "\n    &:disabled,\n    &.biswap-button--disabled {\n      background-color: ".concat(theme.colors.tertiary, ";\n      border-color: ").concat(theme.colors.backgroundDisabled, ";\n      box-shadow: none;\n      color: ").concat(theme.colors.text, ";\n      cursor: not-allowed;\n    }\n  ");
+    return "\n    &:disabled,\n    &.biswap-button--disabled {\n      opacity: 0.32;\n      cursor: not-allowed;\n    }\n  ";
 };
 var getOpacity = function (_a) {
     var _b = _a.$isLoading, $isLoading = _b === void 0 ? false : _b;
     return $isLoading ? ".5" : "1";
 };
-var StyledButton$1 = styled.button(templateObject_1$O || (templateObject_1$O = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  //box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.2s, opacity 0.2s;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  //box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.2s, opacity 0.2s;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, variant$1({
+var StyledButton$1 = styled.button(templateObject_1$O || (templateObject_1$O = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n    box-shadow: none;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n    box-shadow: none;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, variant$1({
     prop: "scale",
     variants: scaleVariants$1,
 }), variant$1({
