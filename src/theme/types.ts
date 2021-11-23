@@ -37,31 +37,16 @@ export type Gradients = {
 
 export type Colors = {
   primary: string;
-  primaryBright: string;
-  primaryDark: string;
-  secondary: string;
-  header: string;
-  tertiary: string;
   success: string;
   failure: string;
   warning: string;
   contrast: string;
-  invertedContrast: string;
-  input: string;
-  inputBorder: string;
-  inputSecondary: string;
   background: string;
-  backgroundContrast: string;
-  backgroundDisabled: string;
-  text: string;
-  disabled: string;
-  textDisabled: string;
-  textSubtle: string;
-  borderColor: string;
+  tertiary: string;
   card: string;
-  dropDown: string;
-  footer: string;
-  boost: string;
+  dark: string;
+  gray: string;
+  light: string;
 
   // Gradients
   gradients: Gradients;

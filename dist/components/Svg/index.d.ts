@@ -74,5 +74,7 @@ export { default as LevelIcon } from './Icons/Level';
 export { default as RobiBoostIcon } from './Icons/RobiBoost';
 export { default as MarketBagIcon } from './Icons/MarketBag';
 export { default as FilterIcon } from './Icons/Filter';
+export { default as VolumeOnIcon } from './Icons/VolumeOn';
+export { default as VolumeOffIcon } from './Icons/VolumeOff';
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
