@@ -48,31 +48,31 @@ export { default as DownloadIcon } from "./Icons/Download";
 export { default as LinkIcon } from "./Icons/Link";
 export { default as TelegramIcon } from "./Icons/Telegram";
 export { default as TwitterIcon } from "./Icons/Twitter";
-export { default as RocketIcon } from "./Icons/Rocket"
-export { default as FlagIcon } from "./Icons/Flag"
-export { default as WalletIcon } from "./Icons/Wallet"
-export { default as WaitReloadIcon } from "./Icons/WaitReload"
-export { default as MouseIcon } from "./Icons/Mouse"
-export { default as RatingIcon } from "./Icons/Rating"
-export { default as CupIcon } from "./Icons/Cup"
-export {default as AutoCompaundIcon} from './Icons/AutoCompaund'
-export {default as PolygonIcon} from './Icons/Polygon'
-export {default as BSCIcon} from './Icons/BSC'
-export {default as FireIcon} from './Icons/Fire'
-export {default as HourglassIcon} from './Icons/Hourglass'
-export {default as GasIcon} from './Icons/Gas'
-export {default as TradeIcon} from './Icons/Trade'
-export {default as StarIcon} from './Icons/Star'
-export {default as CheckedIcon} from './Icons/Checked'
-export {default as LightningIcon} from './Icons/Lightning'
-export {default as HammerIcon} from './Icons/Hammer'
-export {default as FavoriteFullIcon} from './Icons/FavoriteFull'
-export {default as FavoriteEmptyIcon} from './Icons/FavoriteEmpty'
-export {default as ShareIcon} from './Icons/Share'
-export {default as ViewIcon} from './Icons/View'
-export {default as LevelIcon} from './Icons/Level'
-export {default as RobiBoostIcon} from './Icons/RobiBoost'
-export {default as MarketBagIcon} from './Icons/MarketBag'
-export {default as FilterIcon} from './Icons/Filter'
+export { default as RocketIcon } from "./Icons/Rocket";
+export { default as FlagIcon } from "./Icons/Flag";
+export { default as WalletIcon } from "./Icons/Wallet";
+export { default as WaitReloadIcon } from "./Icons/WaitReload";
+export { default as MouseIcon } from "./Icons/Mouse";
+export { default as RatingIcon } from "./Icons/Rating";
+export { default as CupIcon } from "./Icons/Cup";
+export { default as AutoCompaundIcon } from './Icons/AutoCompaund';
+export { default as PolygonIcon } from './Icons/Polygon';
+export { default as BSCIcon } from './Icons/BSC';
+export { default as FireIcon } from './Icons/Fire';
+export { default as HourglassIcon } from './Icons/Hourglass';
+export { default as GasIcon } from './Icons/Gas';
+export { default as TradeIcon } from './Icons/Trade';
+export { default as StarIcon } from './Icons/Star';
+export { default as CheckedIcon } from './Icons/Checked';
+export { default as LightningIcon } from './Icons/Lightning';
+export { default as HammerIcon } from './Icons/Hammer';
+export { default as FavoriteFullIcon } from './Icons/FavoriteFull';
+export { default as FavoriteEmptyIcon } from './Icons/FavoriteEmpty';
+export { default as ShareIcon } from './Icons/Share';
+export { default as ViewIcon } from './Icons/View';
+export { default as LevelIcon } from './Icons/Level';
+export { default as RobiBoostIcon } from './Icons/RobiBoost';
+export { default as MarketBagIcon } from './Icons/MarketBag';
+export { default as FilterIcon } from './Icons/Filter';
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
