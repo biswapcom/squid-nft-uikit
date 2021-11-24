@@ -13,7 +13,7 @@ const getBadgeBg = ({ badgeType = "light", theme }: StyledBadgeProps) => {
   }
 
   if (badgeType === "dark") {
-    return theme.colors.dropDown;
+    return theme.colors.dark;
   }
 
   if (badgeType === "new") {
@@ -32,16 +32,12 @@ const getBadgeBg = ({ badgeType = "light", theme }: StyledBadgeProps) => {
     return theme.colors.warning;
   }
 
-  if (badgeType === "boost") {
-    return theme.colors.boost;
-  }
-
-  return theme.colors.inputBorder;
+  return theme.colors.dark;
 };
 
 const getBadgeColor = ({ badgeType = "light", theme }: StyledBadgeProps) => {
   if (badgeType === "light" || badgeType === "dark") {
-    return theme.colors.text;
+    return theme.colors.light;
   }
 
   if (badgeType === "new" || badgeType === "primary" || badgeType === "hot" || badgeType === "boost") {

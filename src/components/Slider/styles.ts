@@ -87,7 +87,7 @@ export const BarBackground = styled.div`
   width: 100%;
   height: 2px;
   top: 18px;
-  background-color: ${({ theme }) => theme.colors.inputSecondary};
+  background-color: ${({ theme }) => theme.colors.tertiary};
 `;
 
 export const BarProgress = styled.div<{ progress: number; isCurrentValueMaxValue: boolean }>`

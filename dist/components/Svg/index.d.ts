@@ -78,6 +78,8 @@ export { default as VolumeOnIcon } from './Icons/VolumeOn';
 export { default as VolumeOffIcon } from './Icons/VolumeOff';
 export { default as SquidEnergyIcon } from './Icons/SquidEnergy';
 export { default as DiceIcon } from './Icons/Dice';
+export { default as MediumIcon } from './Icons/Medium';
+export { default as YouTubeIcon } from './Icons/YouTube';
 export { default as FarmIcon } from './Icons/menu/Farm';
 export { default as PoolIcon } from './Icons/menu/Pool';
 export { default as NFTIcon } from './Icons/menu/NftNew';

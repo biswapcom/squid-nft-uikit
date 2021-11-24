@@ -22,7 +22,7 @@ const Tooltip = styled.div<{ isTooltipDisplayed: boolean }>`
   left: 0;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.contrast};
-  color: ${({ theme }) => theme.colors.invertedContrast};
+  color: ${({ theme }) => theme.colors.dark};
   border-radius: 16px;
   opacity: 0.7;
 `;

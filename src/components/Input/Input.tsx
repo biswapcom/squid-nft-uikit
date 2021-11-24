@@ -17,7 +17,7 @@ const getBorderColor = ({ isSuccess = false, isWarning = false, theme }: StyledI
     return theme.colors.success;
   }
 
-  return theme.colors.inputBorder;
+  return theme.colors.dark;
 };
 
 const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
@@ -33,10 +33,10 @@ const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
 };
 
 const Input = styled.input<InputProps>`
-  background-color: ${({ theme, isLight }) => ( isLight ? 'transparent' : theme.colors.input )};
+  background-color: ${({ theme, isLight }) => ( isLight ? 'transparent' : theme.colors.gray )};
   border-radius: 8px;
   border-color: ${getBorderColor};
-  color: ${({ theme, isLight }) => ( isLight ? theme.colors.textSubtle : theme.colors.text )};
+  color: ${({ theme, isLight }) => ( isLight ? theme.colors.light : theme.colors.light )};
   border-width: ${({ isLight }) => ( isLight ? '0px' : '1px' )};
   box-shadow: none;
   border-style: solid;
@@ -48,13 +48,13 @@ const Input = styled.input<InputProps>`
   width: 100%;
 
   &::placeholder {
-    color: ${({ theme }) => theme.colors.textSubtle};
+    color: ${({ theme }) => theme.colors.light};
   }
 
   &:disabled {
-    background-color: ${({ theme }) => theme.colors.backgroundDisabled};
+    background-color: ${({ theme }) => theme.colors.background};
     box-shadow: none;
-    color: ${({ theme }) => theme.colors.textDisabled};
+    color: ${({ theme }) => theme.colors.gray};
     cursor: not-allowed;
   }
 
