@@ -2213,7 +2213,7 @@ var templateObject_1$d, templateObject_2$9;
 var breakpointMap = {
     xs: 370,
     sm: 576,
-    md: 852,
+    md: 768,
     lg: 968,
     xl: 1080,
     xll: 1200,
