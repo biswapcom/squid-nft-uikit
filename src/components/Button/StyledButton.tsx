@@ -57,7 +57,6 @@ const StyledButton = styled.button<BaseButtonProps>`
 
   &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {
     //opacity: 0.65;
-    box-shadow: none;
   }
 
   &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {

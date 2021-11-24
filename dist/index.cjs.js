@@ -199,12 +199,18 @@ var styleVariants$2 = (_b$1 = {},
     _b$1[variants$3.PRIMARY] = {
         backgroundColor: "primary",
         color: "contrast",
-        boxShadow: "0px 6px 24px rgba(255, 28, 94, 0.32), inset 0px 1px 0.5px #FF4B56, inset 0px -2px 1px #B40034",
+        // boxShadow: "0px 6px 24px rgba(255, 28, 94, 0.32), inset 0px 1px 0.5px #FF4B56, inset 0px -2px 1px #B40034",
+        ":hover": {
+            backgroundColor: "#FF3A74",
+        },
     },
     _b$1[variants$3.SECONDARY] = {
         backgroundColor: "success",
-        boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
+        // boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
         color: "contrast",
+        ":hover": {
+            backgroundColor: "#007B5D",
+        },
     },
     _b$1[variants$3.TRANSPARENT] = {
         backgroundColor: "transparent",
@@ -216,7 +222,10 @@ var styleVariants$2 = (_b$1 = {},
     _b$1[variants$3.TERTIARY] = {
         backgroundColor: "dark",
         color: "contrast",
-        boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
+        // boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
+        ":hover": {
+            backgroundColor: "#141422",
+        },
     },
     _b$1[variants$3.TEXT] = {
         backgroundColor: "transparent",
@@ -236,7 +245,7 @@ var getOpacity = function (_a) {
     var _b = _a.$isLoading, $isLoading = _b === void 0 ? false : _b;
     return $isLoading ? ".5" : "1";
 };
-var StyledButton$1 = styled__default["default"].button(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n    box-shadow: none;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n    box-shadow: none;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, styledSystem.variant({
+var StyledButton$1 = styled__default["default"].button(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, styledSystem.variant({
     prop: "scale",
     variants: scaleVariants$1,
 }), styledSystem.variant({
