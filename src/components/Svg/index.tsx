@@ -76,5 +76,15 @@ export {default as MarketBagIcon} from './Icons/MarketBag'
 export {default as FilterIcon} from './Icons/Filter'
 export {default as VolumeOnIcon} from './Icons/VolumeOn'
 export {default as VolumeOffIcon} from './Icons/VolumeOff'
+
+
+export {default as FarmIcon} from './Icons/menu/Farm'
+export {default as PoolIcon} from './Icons/menu/Pool'
+export {default as NFTIcon} from './Icons/menu/NftNew'
+export {default as ReferralIcon} from './Icons/menu/Referral'
+export {default as TicketIcon} from './Icons/menu/Ticket'
+
+
+
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
