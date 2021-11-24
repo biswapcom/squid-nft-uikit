@@ -220,7 +220,7 @@ var styleVariants$2 = (_b$1 = {},
     },
     _b$1[variants$3.TEXT] = {
         backgroundColor: "transparent",
-        color: "primary",
+        color: "contrast",
         boxShadow: "none",
     },
     _b$1);
