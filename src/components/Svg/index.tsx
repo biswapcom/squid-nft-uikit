@@ -76,6 +76,8 @@ export {default as MarketBagIcon} from './Icons/MarketBag'
 export {default as FilterIcon} from './Icons/Filter'
 export {default as VolumeOnIcon} from './Icons/VolumeOn'
 export {default as VolumeOffIcon} from './Icons/VolumeOff'
+export {default as SquidEnergyIcon} from './Icons/SquidEnergy'
+export {default as DiceIcon} from './Icons/Dice'
 
 
 export {default as FarmIcon} from './Icons/menu/Farm'
