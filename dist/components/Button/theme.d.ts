@@ -24,15 +24,19 @@ export declare const styleVariants: {
     primary: {
         backgroundColor: string;
         color: string;
+        boxShadow: string;
         ":hover": {
             backgroundColor: string;
+            boxShadow: string;
         };
     };
     secondary: {
         backgroundColor: string;
+        boxShadow: string;
         color: string;
         ":hover": {
             backgroundColor: string;
+            boxShadow: string;
         };
     };
     transparent: {
