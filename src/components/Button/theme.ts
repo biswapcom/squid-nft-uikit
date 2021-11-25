@@ -27,17 +27,19 @@ export const styleVariants = {
   [variants.PRIMARY]: {
     backgroundColor: "primary",
     color: "contrast",
-    // boxShadow: "0px 6px 24px rgba(255, 28, 94, 0.32), inset 0px 1px 0.5px #FF4B56, inset 0px -2px 1px #B40034",
+    boxShadow: "0px 6px 24px rgba(255, 28, 94, 0.32), inset 0px 1px 0.5px #FF4B56, inset 0px -2px 1px #B40034",
     ":hover": {
       backgroundColor: "#FF3A74",
+      boxShadow: "inset 0px 1px 0.5px #FF4B56, inset 0px -2px 1px #B40034",
     },
   },
   [variants.SECONDARY]: {
     backgroundColor: "success",
-    // boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
+    boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
     color: "contrast",
     ":hover": {
       backgroundColor: "#007B5D",
+      boxShadow: "inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
     },
   },
   [variants.TRANSPARENT]: {
