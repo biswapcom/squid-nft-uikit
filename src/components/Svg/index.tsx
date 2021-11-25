@@ -35,6 +35,7 @@ export { default as PlayCircleOutlineIcon } from "./Icons/PlayCircleOutline";
 export { default as PrizeIcon } from "./Icons/Prize";
 export { default as RemoveIcon } from "./Icons/Remove";
 export { default as VerifiedIcon } from "./Icons/Verified";
+export { default as ProgressBunny } from "./Icons/ProgressBunny";
 export { default as WaitIcon } from "./Icons/Wait";
 export { default as Won } from "./Icons/Won";
 export { default as ThreeDotsIcon } from "./Icons/ThreeDots";
@@ -73,5 +74,22 @@ export {default as LevelIcon} from './Icons/Level'
 export {default as RobiBoostIcon} from './Icons/RobiBoost'
 export {default as MarketBagIcon} from './Icons/MarketBag'
 export {default as FilterIcon} from './Icons/Filter'
+export {default as VolumeOnIcon} from './Icons/VolumeOn'
+export {default as VolumeOffIcon} from './Icons/VolumeOff'
+export {default as SquidEnergyIcon} from './Icons/SquidEnergy'
+export {default as DiceIcon} from './Icons/Dice'
+export {default as MediumIcon} from './Icons/Medium'
+export {default as YouTubeIcon} from './Icons/YouTube'
+export {default as HamburgerIcon} from './Icons/Hamburger'
+
+
+export {default as FarmIcon} from './Icons/menu/Farm'
+export {default as PoolIcon} from './Icons/menu/Pool'
+export {default as NFTIcon} from './Icons/menu/NftNew'
+export {default as ReferralIcon} from './Icons/menu/Referral'
+export {default as TicketIcon} from './Icons/menu/Ticket'
+
+
+
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

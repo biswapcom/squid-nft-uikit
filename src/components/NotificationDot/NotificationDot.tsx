@@ -15,7 +15,7 @@ const Dot = styled.span<DotProps>`
   width: 10px;
   height: 10px;
   pointer-events: none;
-  border: 2px solid ${({ theme }) => theme.colors.invertedContrast};
+  border: 2px solid ${({ theme }) => theme.colors.dark};
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.failure};
 `;
