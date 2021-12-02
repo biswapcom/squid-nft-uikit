@@ -49,6 +49,14 @@ export const styleVariants = {
       backgroundColor: "transparent",
     },
   },
+  [variants.UNDERLINE]: {
+    backgroundColor: "transparent",
+    color: "contrast",
+    ":disabled": {
+      backgroundColor: "transparent",
+      color: 'gray'
+    },
+  },
   [variants.TERTIARY]: {
     backgroundColor: "dark",
     color: "contrast",

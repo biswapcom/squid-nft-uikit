@@ -29,7 +29,7 @@ export const Default: React.FC = () => {
   return (
     <>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="tertiary" scale="xl">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} lineColor='light' variant="underline" scale="xl">
           <ButtonMenuItem>Transparent 1</ButtonMenuItem>
           <ButtonMenuItem>Transparent 2</ButtonMenuItem>
           <ButtonMenuItem>Transparent 3</ButtonMenuItem>
@@ -38,7 +38,25 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="transparent" scale="xl">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" scale="md">
+          <ButtonMenuItem>Transparent 1</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 2</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 3</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 4</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 5</ButtonMenuItem>
+        </ButtonMenu>
+      </Row>
+      <Row>
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" scale="sm">
+          <ButtonMenuItem>Transparent 1</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 2</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 3</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 4</ButtonMenuItem>
+          <ButtonMenuItem>Transparent 5</ButtonMenuItem>
+        </ButtonMenu>
+      </Row>
+      <Row>
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" scale="xs">
           <ButtonMenuItem>Transparent 1</ButtonMenuItem>
           <ButtonMenuItem>Transparent 2</ButtonMenuItem>
           <ButtonMenuItem>Transparent 3</ButtonMenuItem>
@@ -63,7 +81,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="subtle">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick}>
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -71,7 +89,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index1} onItemClick={handleClick1} scale="sm" variant="subtle">
+        <ButtonMenu activeIndex={index1} onItemClick={handleClick1} scale="sm">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>
@@ -79,7 +97,7 @@ export const Default: React.FC = () => {
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index1} autoWidth onItemClick={handleClick1} scale="sm" variant="subtle">
+        <ButtonMenu activeIndex={index1} autoWidth onItemClick={handleClick1} scale="sm">
           <ButtonMenuItem>Button 1</ButtonMenuItem>
           <ButtonMenuItem>Button 2</ButtonMenuItem>
           <ButtonMenuItem>Button 3</ButtonMenuItem>

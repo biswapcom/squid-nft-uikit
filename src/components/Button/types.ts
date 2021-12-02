@@ -1,6 +1,7 @@
 import { ComponentProps, ElementType, ReactElement, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { LayoutProps, SpaceProps } from "styled-system";
+import {Colors} from "../../theme/types";
 
 export const scales = {
   XL: 'xl',
@@ -15,6 +16,7 @@ export const variants = {
   SECONDARY: "secondary",
   TERTIARY: "tertiary",
   TEXT: "text",
+  UNDERLINE: 'underline',
 } as const;
 
 export type Scale = typeof scales[keyof typeof scales];
@@ -44,6 +46,7 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   disabled?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
+  lineColor?: ''
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

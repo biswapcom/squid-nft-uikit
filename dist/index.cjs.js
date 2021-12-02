@@ -170,6 +170,7 @@ var variants$3 = {
     SECONDARY: "secondary",
     TERTIARY: "tertiary",
     TEXT: "text",
+    UNDERLINE: 'underline',
 };
 
 var _a$4, _b$1;
@@ -221,6 +222,14 @@ var styleVariants$2 = (_b$1 = {},
             backgroundColor: "transparent",
         },
     },
+    _b$1[variants$3.UNDERLINE] = {
+        backgroundColor: "transparent",
+        color: "contrast",
+        ":disabled": {
+            backgroundColor: "transparent",
+            color: 'gray'
+        },
+    },
     _b$1[variants$3.TERTIARY] = {
         backgroundColor: "dark",
         color: "contrast",
@@ -247,12 +256,21 @@ var getOpacity = function (_a) {
     var _b = _a.$isLoading, $isLoading = _b === void 0 ? false : _b;
     return $isLoading ? ".5" : "1";
 };
-var StyledButton$1 = styled__default["default"].button(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), getOpacity, getDisabledStyles, styledSystem.variant({
+var StyledButton$1 = styled__default["default"].button(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: relative;\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  \n  &:after {\n    display: ", ";\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    height: 4px;\n    border-radius: 4px;\n    width: calc(100% - ", ");\n    background: ", ";\n    z-index: 99;\n  }\n"], ["\n  position: relative;\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  \n  &:after {\n    display: ", ";\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    height: 4px;\n    border-radius: 4px;\n    width: calc(100% - ", ");\n    background: ", ";\n    z-index: 99;\n  }\n"])), getOpacity, getDisabledStyles, styledSystem.variant({
     prop: "scale",
     variants: scaleVariants$1,
 }), styledSystem.variant({
     variants: styleVariants$2,
-}), styledSystem.layout, styledSystem.space);
+}), styledSystem.layout, styledSystem.space, function (_a) {
+    var variant = _a.variant;
+    return variant === variants$3.UNDERLINE ? 'block' : 'none';
+}, function (_a) {
+    var scale = _a.scale;
+    return scale === scales$5.XS ? '12px' : scale === scales$5.SM ? '28px' : scale === scales$5.MD ? '44px' : '20px';
+}, function (_a) {
+    var theme = _a.theme, lineColor = _a.lineColor;
+    return lineColor ? theme.colors[lineColor] : 'primary';
+});
 var templateObject_1$J;
 
 var Button = function (props) {
@@ -1017,13 +1035,14 @@ var StyledButtonMenu = styled__default["default"].div(templateObject_1$z || (tem
 var templateObject_1$z;
 
 var ButtonMenu = function (_a) {
-    var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$5.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$3.PRIMARY : _d, onItemClick = _a.onItemClick, _e = _a.autoWidth, autoWidth = _e === void 0 ? false : _e, children = _a.children;
+    var _b = _a.activeIndex, activeIndex = _b === void 0 ? 0 : _b, _c = _a.scale, scale = _c === void 0 ? scales$5.MD : _c, _d = _a.variant, variant = _d === void 0 ? variants$3.PRIMARY : _d, onItemClick = _a.onItemClick, _e = _a.autoWidth, autoWidth = _e === void 0 ? false : _e, children = _a.children, lineColor = _a.lineColor;
     return (React__default["default"].createElement(StyledButtonMenu, { variant: variant, autoWidth: autoWidth }, React.Children.map(children, function (child, index) {
         return React.cloneElement(child, {
             isActive: activeIndex === index,
             onClick: onItemClick ? function () { return onItemClick(index); } : undefined,
             scale: scale,
             variant: variant,
+            lineColor: lineColor || 'primary'
         });
     })));
 };
@@ -1035,7 +1054,7 @@ var InactiveButton = styled__default["default"](Button)(templateObject_1$y || (t
 var ButtonMenuItem = function (_a) {
     var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.variant, variant = _c === void 0 ? variants$3.PRIMARY : _c, as = _a.as, props = __rest(_a, ["isActive", "variant", "as"]);
     if (!isActive) {
-        return (React__default["default"].createElement(InactiveButton, __assign({ forwardedAs: as, variant: "tertiary", color: variant === variants$3.PRIMARY ? "light" : variant === variants$3.TERTIARY ? 'tertiary' : "primary" }, props)));
+        return (React__default["default"].createElement(InactiveButton, __assign({ forwardedAs: as, variant: "tertiary", color: variant === variants$3.PRIMARY ? "light" : variant === variants$3.TERTIARY ? 'tertiary' : variant === variants$3.UNDERLINE ? 'gray' : "primary" }, props)));
     }
     return React__default["default"].createElement(Button, __assign({ as: as, variant: variant === variants$3.TERTIARY ? 'primary' : variant }, props));
 };

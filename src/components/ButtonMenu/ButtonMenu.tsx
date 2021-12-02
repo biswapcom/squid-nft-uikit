@@ -10,6 +10,7 @@ const ButtonMenu: React.FC<ButtonMenuProps> = ({
   onItemClick,
   autoWidth= false,
   children,
+                                                 lineColor,
 }) => {
   return (
     <StyledButtonMenu variant={variant} autoWidth={autoWidth}>
@@ -19,6 +20,7 @@ const ButtonMenu: React.FC<ButtonMenuProps> = ({
           onClick: onItemClick ? () => onItemClick(index) : undefined,
           scale,
           variant,
+          lineColor: lineColor || 'primary'
         });
       })}
     </StyledButtonMenu>

@@ -46,6 +46,14 @@ export declare const styleVariants: {
             backgroundColor: string;
         };
     };
+    underline: {
+        backgroundColor: string;
+        color: string;
+        ":disabled": {
+            backgroundColor: string;
+            color: string;
+        };
+    };
     tertiary: {
         backgroundColor: string;
         color: string;

@@ -1,7 +1,7 @@
 import styled, { DefaultTheme } from "styled-components";
 import { space, layout, variant } from "styled-system";
 import { scaleVariants, styleVariants } from "./theme";
-import { BaseButtonProps } from "./types";
+import {BaseButtonProps, scales, variants} from "./types";
 
 interface ThemedButtonProps extends BaseButtonProps {
   theme: DefaultTheme;
@@ -40,6 +40,7 @@ const getOpacity = ({ $isLoading = false }: TransientButtonProps) => {
 };
 
 const StyledButton = styled.button<BaseButtonProps>`
+  position: relative;
   align-items: center;
   border: 0;
   border-radius: 8px;
@@ -73,6 +74,18 @@ const StyledButton = styled.button<BaseButtonProps>`
   })}
   ${layout}
   ${space}
+  
+  &:after {
+    display: ${({ variant }) => variant === variants.UNDERLINE ? 'block' : 'none'};
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    border-radius: 4px;
+    width: calc(100% - ${({ scale }) => scale === scales.XS ? '12px' : scale === scales.SM ? '28px' : scale === scales.MD ? '44px' : '20px'});
+    background: ${({ theme, lineColor }) => lineColor ? theme.colors[lineColor] : 'primary'};
+    z-index: 99;
+  }
 `;
 
 export default StyledButton;
