@@ -35,6 +35,6 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
     disabled?: boolean;
     startIcon?: ReactNode;
     endIcon?: ReactNode;
-    lineColor?: "primary" | "light" | 'tertiary' | 'gray';
+    lineColor?: "primary" | "light" | 'contrast' | 'gray';
 }
 export declare type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

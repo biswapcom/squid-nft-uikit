@@ -1,7 +1,6 @@
 import { ComponentProps, ElementType, ReactElement, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { LayoutProps, SpaceProps } from "styled-system";
-import {Colors} from "../../theme/types";
 
 export const scales = {
   XL: 'xl',
@@ -46,7 +45,7 @@ export interface BaseButtonProps extends LayoutProps, SpaceProps {
   disabled?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-  lineColor?: "primary" | "light" | 'tertiary' | 'gray'
+  lineColor?: "primary" | "light" | 'contrast' | 'gray'
 }
 
 export type ButtonProps<P extends ElementType = "button"> = PolymorphicComponentProps<P, BaseButtonProps>;

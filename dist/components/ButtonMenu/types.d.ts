@@ -10,5 +10,5 @@ export interface ButtonMenuProps {
     scale?: Scale;
     children: React.ReactElement[];
     autoWidth?: boolean;
-    lineColor?: string;
+    lineColor: "primary" | "light" | 'contrast' | 'gray';
 }

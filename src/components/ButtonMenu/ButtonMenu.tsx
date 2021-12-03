@@ -20,7 +20,7 @@ const ButtonMenu: React.FC<ButtonMenuProps> = ({
           onClick: onItemClick ? () => onItemClick(index) : undefined,
           scale,
           variant,
-          lineColor: lineColor || 'primary'
+          lineColor: lineColor
         });
       })}
     </StyledButtonMenu>

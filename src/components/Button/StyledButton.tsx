@@ -82,8 +82,8 @@ const StyledButton = styled.button<BaseButtonProps>`
     bottom: 0;
     height: 4px;
     border-radius: 4px;
-    width: calc(100% - ${({ scale }) => scale === scales.XS ? '12px' : scale === scales.SM ? '28px' : scale === scales.MD ? '44px' : '20px'});
-    background: ${({ theme, lineColor }) => lineColor ? theme.colors[lineColor] : 'primary'};
+    width: calc(100% - ${({ scale }) => scale === scales.XS ? '12px' : scale === scales.SM ? '28px' : scale === scales.MD ? '20px' : '44px'});
+    background-color: ${({ theme, lineColor }) => lineColor ? theme.colors[lineColor] : theme.colors.primary};
     z-index: 99;
   }
 `;

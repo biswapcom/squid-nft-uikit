@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Meta } from "@storybook/react/types-6-0";
 import ButtonMenu from "./ButtonMenu";
 import ButtonMenuItem from "./ButtonMenuItem";
+import {useMatchBreakpoints} from "../../hooks";
 
 const Row = styled.div`
   margin-bottom: 32px;
@@ -23,22 +24,24 @@ export const Default: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [index1, setIndex1] = useState(1);
 
+    const { isXs, isSm, isMd, isLg } = useMatchBreakpoints()
+    const isMobile = isXs || isSm
+    const isTablet = isMd || isLg
+
   const handleClick = (newIndex) => setIndex(newIndex);
   const handleClick1 = (newIndex) => setIndex1(newIndex);
 
   return (
     <>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} lineColor='light' variant="underline" scale="xl">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} lineColor='light' variant="underline" scale={isMobile || isTablet ? 'md' : 'xl'}>
           <ButtonMenuItem>Transparent 1</ButtonMenuItem>
           <ButtonMenuItem>Transparent 2</ButtonMenuItem>
           <ButtonMenuItem>Transparent 3</ButtonMenuItem>
-          <ButtonMenuItem>Transparent 4</ButtonMenuItem>
-          <ButtonMenuItem>Transparent 5</ButtonMenuItem>
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" scale="md">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" lineColor='primary' scale="md">
           <ButtonMenuItem>Transparent 1</ButtonMenuItem>
           <ButtonMenuItem>Transparent 2</ButtonMenuItem>
           <ButtonMenuItem>Transparent 3</ButtonMenuItem>

@@ -244,7 +244,7 @@ var getOpacity = function (_a) {
     var _b = _a.$isLoading, $isLoading = _b === void 0 ? false : _b;
     return $isLoading ? ".5" : "1";
 };
-var StyledButton$1 = styled.button(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: relative;\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  \n  &:after {\n    display: ", ";\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    height: 4px;\n    border-radius: 4px;\n    width: calc(100% - ", ");\n    background: ", ";\n    z-index: 99;\n  }\n"], ["\n  position: relative;\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  \n  &:after {\n    display: ", ";\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    height: 4px;\n    border-radius: 4px;\n    width: calc(100% - ", ");\n    background: ", ";\n    z-index: 99;\n  }\n"])), getOpacity, getDisabledStyles, variant$1({
+var StyledButton$1 = styled.button(templateObject_1$J || (templateObject_1$J = __makeTemplateObject(["\n  position: relative;\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  \n  &:after {\n    display: ", ";\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    height: 4px;\n    border-radius: 4px;\n    width: calc(100% - ", ");\n    background-color: ", ";\n    z-index: 99;\n  }\n"], ["\n  position: relative;\n  align-items: center;\n  border: 0;\n  border-radius: 8px;\n  cursor: pointer;\n  display: inline-flex;\n  font-family: inherit;\n  font-size: 16px;\n  font-weight: 600;\n  justify-content: center;\n  letter-spacing: 0.03em;\n  line-height: 1;\n  opacity: ", ";\n  outline: 0;\n  transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s ease;\n\n  &:hover:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(:active):not(.hover-disabled) {\n    //opacity: 0.65;\n  }\n\n  &:active:not(:disabled):not(.biswap-button--disabled):not(.biswap-button--disabled):not(.hover-disabled) {\n    opacity: 0.85;\n  }\n\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  \n  &:after {\n    display: ", ";\n    content: \"\";\n    position: absolute;\n    bottom: 0;\n    height: 4px;\n    border-radius: 4px;\n    width: calc(100% - ", ");\n    background-color: ", ";\n    z-index: 99;\n  }\n"])), getOpacity, getDisabledStyles, variant$1({
     prop: "scale",
     variants: scaleVariants$1,
 }), variant$1({
@@ -254,10 +254,10 @@ var StyledButton$1 = styled.button(templateObject_1$J || (templateObject_1$J = _
     return variant === variants$3.UNDERLINE ? 'block' : 'none';
 }, function (_a) {
     var scale = _a.scale;
-    return scale === scales$5.XS ? '12px' : scale === scales$5.SM ? '28px' : scale === scales$5.MD ? '44px' : '20px';
+    return scale === scales$5.XS ? '12px' : scale === scales$5.SM ? '28px' : scale === scales$5.MD ? '20px' : '44px';
 }, function (_a) {
     var theme = _a.theme, lineColor = _a.lineColor;
-    return lineColor ? theme.colors[lineColor] : 'primary';
+    return lineColor ? theme.colors[lineColor] : theme.colors.primary;
 });
 var templateObject_1$J;
 
@@ -1030,7 +1030,7 @@ var ButtonMenu = function (_a) {
             onClick: onItemClick ? function () { return onItemClick(index); } : undefined,
             scale: scale,
             variant: variant,
-            lineColor: lineColor || 'primary'
+            lineColor: lineColor
         });
     })));
 };
