@@ -262,7 +262,7 @@ var StyledButton$1 = styled.button(templateObject_1$J || (templateObject_1$J = _
 var templateObject_1$J;
 
 var Button = function (props) {
-    var startIcon = props.startIcon, endIcon = props.endIcon, external = props.external, className = props.className, isLoading = props.isLoading, disabled = props.disabled, children = props.children, rest = __rest(props, ["startIcon", "endIcon", "external", "className", "isLoading", "disabled", "children"]);
+    var startIcon = props.startIcon, endIcon = props.endIcon, external = props.external, className = props.className, isLoading = props.isLoading, disabled = props.disabled, children = props.children, lineColor = props.lineColor, rest = __rest(props, ["startIcon", "endIcon", "external", "className", "isLoading", "disabled", "children", "lineColor"]);
     var internalProps = external ? getExternalLinkProps() : {};
     var isDisabled = isLoading || disabled;
     var classNames = className ? [className] : [];
@@ -272,7 +272,7 @@ var Button = function (props) {
     if (isDisabled && !isLoading) {
         classNames.push("biswap-button--disabled");
     }
-    return (React.createElement(StyledButton$1, __assign({ "$isLoading": isLoading, className: classNames.join(" "), disabled: isDisabled }, internalProps, rest),
+    return (React.createElement(StyledButton$1, __assign({ "$isLoading": isLoading, className: classNames.join(" "), disabled: isDisabled, lineColor: lineColor }, internalProps, rest),
         React.createElement(React.Fragment, null,
             isValidElement(startIcon) &&
                 cloneElement(startIcon, {
@@ -1040,11 +1040,11 @@ var InactiveButton = styled(Button)(templateObject_1$y || (templateObject_1$y = 
     return theme.colors[color];
 });
 var ButtonMenuItem = function (_a) {
-    var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.variant, variant = _c === void 0 ? variants$3.PRIMARY : _c, as = _a.as, props = __rest(_a, ["isActive", "variant", "as"]);
+    var _b = _a.isActive, isActive = _b === void 0 ? false : _b, _c = _a.variant, variant = _c === void 0 ? variants$3.PRIMARY : _c, as = _a.as, lineColor = _a.lineColor, props = __rest(_a, ["isActive", "variant", "as", "lineColor"]);
     if (!isActive) {
         return (React.createElement(InactiveButton, __assign({ forwardedAs: as, variant: "tertiary", color: variant === variants$3.PRIMARY ? "light" : variant === variants$3.TERTIARY ? 'tertiary' : variant === variants$3.UNDERLINE ? 'gray' : "primary" }, props)));
     }
-    return React.createElement(Button, __assign({ as: as, variant: variant === variants$3.TERTIARY ? 'primary' : variant }, props));
+    return React.createElement(Button, __assign({ as: as, variant: variant === variants$3.TERTIARY ? 'primary' : variant, lineColor: lineColor }, props));
 };
 var templateObject_1$y;
 
