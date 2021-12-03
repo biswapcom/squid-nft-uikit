@@ -34,14 +34,14 @@ export const Default: React.FC = () => {
   return (
     <>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} lineColor='light' variant="underline" scale={isMobile || isTablet ? 'md' : 'xl'}>
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} line='light' variant="underline" scale={isMobile || isTablet ? 'md' : 'xl'}>
           <ButtonMenuItem>Buses</ButtonMenuItem>
           <ButtonMenuItem>Buses</ButtonMenuItem>
           <ButtonMenuItem>Buses</ButtonMenuItem>
         </ButtonMenu>
       </Row>
       <Row>
-        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" lineColor='primary' scale="md">
+        <ButtonMenu activeIndex={index} onItemClick={handleClick} variant="underline" line='primary' scale="md">
           <ButtonMenuItem>Transparent 1</ButtonMenuItem>
           <ButtonMenuItem>Transparent 2</ButtonMenuItem>
           <ButtonMenuItem>Transparent 3</ButtonMenuItem>

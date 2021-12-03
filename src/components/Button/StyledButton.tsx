@@ -83,7 +83,7 @@ const StyledButton = styled.button<BaseButtonProps>`
     height: 4px;
     border-radius: 4px;
     width: calc(100% - ${({ scale }) => scale === scales.XS ? '12px' : scale === scales.SM ? '28px' : scale === scales.MD ? '16px' : '24px'});
-    background-color: ${({ theme, lineColor }) => lineColor ? theme.colors[lineColor] : theme.colors.primary};
+    background-color: ${({ theme, line }) => line ? theme.colors[line] : theme.colors.primary};
   }
 `;
 
