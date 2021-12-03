@@ -35,9 +35,9 @@ export const Default: React.FC = () => {
     <>
       <Row>
         <ButtonMenu activeIndex={index} onItemClick={handleClick} lineColor='light' variant="underline" scale={isMobile || isTablet ? 'md' : 'xl'}>
-          <ButtonMenuItem>Transparent 1</ButtonMenuItem>
-          <ButtonMenuItem>Transparent 2</ButtonMenuItem>
-          <ButtonMenuItem>Transparent 3</ButtonMenuItem>
+          <ButtonMenuItem>Buses</ButtonMenuItem>
+          <ButtonMenuItem>Buses</ButtonMenuItem>
+          <ButtonMenuItem>Buses</ButtonMenuItem>
         </ButtonMenu>
       </Row>
       <Row>

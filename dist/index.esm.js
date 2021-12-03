@@ -254,7 +254,7 @@ var StyledButton$1 = styled.button(templateObject_1$J || (templateObject_1$J = _
     return variant === variants$3.UNDERLINE ? 'block' : 'none';
 }, function (_a) {
     var scale = _a.scale;
-    return scale === scales$5.XS ? '12px' : scale === scales$5.SM ? '28px' : scale === scales$5.MD ? '20px' : '44px';
+    return scale === scales$5.XS ? '12px' : scale === scales$5.SM ? '28px' : scale === scales$5.MD ? '16px' : '24px';
 }, function (_a) {
     var theme = _a.theme, lineColor = _a.lineColor;
     return lineColor ? theme.colors[lineColor] : theme.colors.primary;
