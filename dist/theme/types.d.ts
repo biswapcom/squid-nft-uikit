@@ -41,6 +41,7 @@ export declare type Colors = {
     dark: string;
     gray: string;
     light: string;
+    lineColor?: string;
     gradients: Gradients;
     binance: string;
     polygon: string;

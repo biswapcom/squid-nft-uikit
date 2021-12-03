@@ -21,6 +21,7 @@ const ButtonMenuItem: PolymorphicComponent<ButtonMenuItemProps, "button"> = ({
   isActive = false,
   variant = variants.PRIMARY,
   as,
+    lineColor,
   ...props
 }: ButtonMenuItemProps) => {
   if (!isActive) {
@@ -34,7 +35,7 @@ const ButtonMenuItem: PolymorphicComponent<ButtonMenuItemProps, "button"> = ({
     );
   }
 
-  return <Button as={as} variant={variant === variants.TERTIARY ? 'primary' : variant} {...props} />;
+  return <Button as={as} variant={variant === variants.TERTIARY ? 'primary' : variant} lineColor={lineColor} {...props} />;
 };
 
 export default ButtonMenuItem;
