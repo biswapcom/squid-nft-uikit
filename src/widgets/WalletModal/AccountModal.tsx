@@ -33,6 +33,11 @@ const TransactionWrapper = styled.div`
   background-color: #F2F6FC;
 `
 
+const Line = styled.div`
+  background: ${({ theme }) => theme.colors.dark};
+  width: 100%;
+  height: 2px;
+`
 
 const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, logout, onDismiss = () => null, login,recentTransaction,chainId,clearTransaction}) =>{
 
@@ -51,29 +56,32 @@ const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, l
 
   return (
     <Modal title="Your wallet" onDismiss={onDismiss}>
-      <ConnectedWrapper>
-        <Text fontSize='14px' fontWeight='400' lineHeight='21px' color='#1DC872'>Connected</Text>
-        <Button onClick={changeWalletHandler} scale='sm' variant='primary'>Change</Button>
-      </ConnectedWrapper>
+      {/*<ConnectedWrapper>*/}
+      {/*  <Text fontSize='14px' fontWeight='400' lineHeight='21px' color='#1DC872'>Connected</Text>*/}
+      {/*  <Button onClick={changeWalletHandler} scale='sm' variant='primary'>Change</Button>*/}
+      {/*</ConnectedWrapper>*/}
+        <Line />
       <Text
         fontSize="14px"
         fontWeight='600'
-        color='#07162D'
+        color='contrast'
         style={{
           whiteSpace: "nowrap",
           overflow: "hidden",
           textOverflow: "ellipsis",
-          marginBottom: "8px",
-          marginTop: '16px'
+          marginBottom: "16px",
+          marginTop: '24px'
         }}
       >
         {account}
       </Text>
-      <Flex mb="32px">
-        <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
-        <LinkExternal ml='26px' small href={`https://bscscan.com/address/${account}`} mr="16px">
-          View on BscScan
+      <Flex>
+        <LinkExternal mr='24px' small href={`https://bscscan.com/address/${account}`}>
+            <Text color='success' lineHeight='20px' small bold>View on BscScan</Text>
         </LinkExternal>
+        <CopyToClipboard toCopy={account}>
+            <Text color='success' lineHeight='20px' small bold>Copy Address</Text>
+        </CopyToClipboard>
       </Flex>
         {
           isSwap && (
@@ -96,7 +104,7 @@ const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, l
         <Button
           style={{ width: '100%' }}
           mt='24px'
-          variant="secondary"
+          variant="primary"
           onClick={() => {
             logout();
             onDismiss();

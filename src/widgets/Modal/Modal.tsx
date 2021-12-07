@@ -13,7 +13,7 @@ interface Props extends InjectedProps {
 }
 
 const StyledModal = styled.div`
-  background-color: #25252C;
+  background-color: ${({ theme }) => theme.colors.tertiary};
   border-radius: 16px 16px 0 0;  
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
@@ -32,7 +32,7 @@ const ModalHeader = styled.div`
   padding: 24px 16px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 32px 32px 24px;
+    padding: 24px;
   }
   
   .closeModal {
@@ -51,7 +51,7 @@ const ModalBody = styled.div`
   padding: 0 16px 24px;
   
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 0 32px 32px;
+    padding: 0 24px 24px;
   }
 `
 
