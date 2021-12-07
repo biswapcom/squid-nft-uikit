@@ -2681,18 +2681,24 @@ var StyledIconButton = styled(IconButton)(templateObject_2$6 || (templateObject_
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
-var ModalBody = styled.div(templateObject_3$3 || (templateObject_3$3 = __makeTemplateObject(["\n  padding: 0 16px 24px;\n  \n  ", " {\n    padding: 0 32px 32px;\n  }\n"], ["\n  padding: 0 16px 24px;\n  \n  ", " {\n    padding: 0 32px 32px;\n  }\n"])), function (_a) {
+var ModalBody = styled.div(templateObject_3$3 || (templateObject_3$3 = __makeTemplateObject(["\n  padding: ", ";\n\n  ", " {\n    padding: ", ";\n  }\n"], ["\n  padding: ", ";\n\n  ", " {\n    padding: ", ";\n  }\n"])), function (_a) {
+    var padding = _a.padding;
+    return padding || '0 16px 24px';
+}, function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.sm;
+}, function (_a) {
+    var padding = _a.padding;
+    return padding || '0 24px 24px';
 });
 var Background = styled.img(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  width: 100%;\n"], ["\n  width: 100%;\n"])));
 var ModalWithBackground = function (_a) {
-    var onDismiss = _a.onDismiss, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, backBtnColor = _a.backBtnColor, background = _a.background;
+    var onDismiss = _a.onDismiss, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, backBtnColor = _a.backBtnColor, background = _a.background, p = _a.p;
     return (React.createElement(StyledModal, null,
         !hideCloseButton && (React.createElement(StyledIconButton, { variant: "text", className: "closeModal", scale: "sm", onClick: onDismiss, "aria-label": "Close the dialog" },
             React.createElement(Icon$1d, { width: "24px", color: backBtnColor !== null && backBtnColor !== void 0 ? backBtnColor : "card" }))),
-        React.createElement(Background, { src: background, alt: 'image' }),
-        React.createElement(ModalBody, null, children)));
+        background && React.createElement(Background, { src: background, alt: 'image' }),
+        React.createElement(ModalBody, { padding: p }, children)));
 };
 var templateObject_1$a, templateObject_2$6, templateObject_3$3, templateObject_4$1;
 
