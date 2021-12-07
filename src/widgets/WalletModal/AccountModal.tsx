@@ -39,6 +39,14 @@ const Line = styled.div`
   height: 2px;
 `
 
+const CopyText = styled(Text)`
+  
+  &:hover {
+    text-decoration: underline;
+    color: ${({ theme }) => theme.colors.success};
+  }
+`
+
 const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, logout, onDismiss = () => null, login,recentTransaction,chainId,clearTransaction}) =>{
 
   const { onPresentConnectModal } = useWalletModal(login, logout, account,recentTransaction,chainId);
@@ -80,7 +88,7 @@ const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, l
             <Text color='success' lineHeight='20px' small bold>View on BscScan</Text>
         </LinkExternal>
         <CopyToClipboard toCopy={account}>
-            <Text color='success' lineHeight='20px' small bold>Copy Address</Text>
+            <CopyText color='success' lineHeight='20px' small bold>Copy Address</CopyText>
         </CopyToClipboard>
       </Flex>
         {

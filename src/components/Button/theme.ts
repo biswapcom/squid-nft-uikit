@@ -62,7 +62,7 @@ export const styleVariants = {
     color: "contrast",
     // boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
     ":hover": {
-      backgroundColor: "#141422",
+      backgroundColor: "#46465F",
     },
   },
   [variants.TEXT]: {

@@ -197,7 +197,7 @@ var styleVariants$2 = (_b$1 = {},
         color: "contrast",
         // boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
         ":hover": {
-            backgroundColor: "#141422",
+            backgroundColor: "#46465F",
         },
     },
     _b$1[variants$3.TEXT] = {
@@ -898,7 +898,7 @@ var Details = styled__default["default"].div(templateObject_2$l || (templateObje
     return (hasHandler ? "".concat(withHandlerSpacing, "px") : "12px");
 });
 var CloseHandler = styled__default["default"].div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"], ["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"])));
-var StyledAlert = styled__default["default"](Flex)(templateObject_4$6 || (templateObject_4$6 = __makeTemplateObject(["\n  position: relative;\n  overflow: hidden;\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"], ["\n  position: relative;\n  overflow: hidden;\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"])));
+var StyledAlert = styled__default["default"](Flex)(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  position: relative;\n  overflow: hidden;\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"], ["\n  position: relative;\n  overflow: hidden;\n  background-color: #fff;\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"])));
 var Description = styled__default["default"].p(templateObject_5$4 || (templateObject_5$4 = __makeTemplateObject(["\n  color: #6b7d98;\n  font-size: 16px;\n  vertical-align: middle;\n  font-weight: 400;\n  line-height: 1.5;\n  margin: 0;\n"], ["\n  color: #6b7d98;\n  font-size: 16px;\n  vertical-align: middle;\n  font-weight: 400;\n  line-height: 1.5;\n  margin: 0;\n"])));
 var Alert = function (_a) {
     var style = _a.style, title = _a.title, children = _a.children, variant = _a.variant, onClick = _a.onClick;
@@ -913,7 +913,7 @@ var Alert = function (_a) {
             React__default["default"].createElement(IconButton, { scale: "sm", variant: "text", onClick: onClick },
                 React__default["default"].createElement(Icon$1d, { width: "24px", color: "currentColor" }))))));
 };
-var templateObject_1$E, templateObject_2$l, templateObject_3$a, templateObject_4$6, templateObject_5$4;
+var templateObject_1$E, templateObject_2$l, templateObject_3$a, templateObject_4$7, templateObject_5$4;
 
 var StyledBanner = styled__default["default"].div(templateObject_1$D || (templateObject_1$D = __makeTemplateObject(["\n  padding: 32px;\n  border-radius: 24px;\n  background: ", ";\n  display: flex;\n"], ["\n  padding: 32px;\n  border-radius: 24px;\n  background: ", ";\n  display: flex;\n"])), function (_a) {
     var theme = _a.theme;
@@ -1528,7 +1528,10 @@ Tag.defaultProps = {
     outline: false,
 };
 
-var StyledLink = styled__default["default"](Text)(templateObject_1$k || (templateObject_1$k = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: underline;\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: underline;\n  }\n"])));
+var StyledLink = styled__default["default"](Text)(templateObject_1$k || (templateObject_1$k = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: underline;\n    color: ", ";\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  width: fit-content;\n  &:hover {\n    text-decoration: underline;\n    color: ", ";\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.success;
+});
 var Link = function (_a) {
     var external = _a.external, props = __rest(_a, ["external"]);
     var internalProps = external ? getExternalLinkProps() : {};
@@ -1615,7 +1618,7 @@ var SliderLabel = styled__default["default"].label(templateObject_2$d || (templa
     return progress;
 });
 styled__default["default"].img(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: absolute;\n"], ["\n  position: absolute;\n"])));
-var BunnySlider = styled__default["default"].div(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: 100%;\n"], ["\n  position: absolute;\n  left: 14px;\n  width: 100%;\n"])));
+var BunnySlider = styled__default["default"].div(templateObject_4$6 || (templateObject_4$6 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: 100%;\n"], ["\n  position: absolute;\n  left: 14px;\n  width: 100%;\n"])));
 var StyledInput = styled__default["default"].input(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  height: 32px;\n  position: relative;\n  cursor: pointer;\n\n  ::-webkit-slider-thumb {\n    -webkit-appearance: none;\n    background-image: url(", ");\n    width: 24px;\n    height: 32px;\n    cursor: pointer;\n    transform: translate(-2px, -2px);\n    transition: 0.1s all;\n\n    :hover {\n      transform: scale(1.1) translate(-3px, -3px);\n    }\n  }\n  ::-moz-range-thumb {\n    -webkit-appearance: none;\n    background-image: url(", ");\n    width: 24px;\n    height: 32px;\n    cursor: pointer;\n    transition: 0.1s all;\n    transform: translate(-2px, -2px);\n    // custom moz reset\n    background-color: transparent;\n    border: 0;\n\n    :hover {\n      transform: scale(1.1) translate(-3px, -3px);\n    }\n  }\n  ::-ms-thumb {\n    -webkit-appearance: none;\n    background-image: url(", ");\n    width: 24px;\n    height: 32px;\n    cursor: pointer;\n    transform: translate(-2px, -2px);\n    transition: 0.1s all;\n\n    :hover {\n      transform: scale(1.1) translate(-3px, -3px);\n    }\n  }\n"], ["\n  height: 32px;\n  position: relative;\n  cursor: pointer;\n\n  ::-webkit-slider-thumb {\n    -webkit-appearance: none;\n    background-image: url(", ");\n    width: 24px;\n    height: 32px;\n    cursor: pointer;\n    transform: translate(-2px, -2px);\n    transition: 0.1s all;\n\n    :hover {\n      transform: scale(1.1) translate(-3px, -3px);\n    }\n  }\n  ::-moz-range-thumb {\n    -webkit-appearance: none;\n    background-image: url(", ");\n    width: 24px;\n    height: 32px;\n    cursor: pointer;\n    transition: 0.1s all;\n    transform: translate(-2px, -2px);\n    // custom moz reset\n    background-color: transparent;\n    border: 0;\n\n    :hover {\n      transform: scale(1.1) translate(-3px, -3px);\n    }\n  }\n  ::-ms-thumb {\n    -webkit-appearance: none;\n    background-image: url(", ");\n    width: 24px;\n    height: 32px;\n    cursor: pointer;\n    transform: translate(-2px, -2px);\n    transition: 0.1s all;\n\n    :hover {\n      transform: scale(1.1) translate(-3px, -3px);\n    }\n  }\n"])), function (_a) {
     var isCurrentValueMaxValue = _a.isCurrentValueMaxValue;
     return (isCurrentValueMaxValue ? bunnyHeadMax : bunnyHeadMain);
@@ -1637,7 +1640,7 @@ var BarProgress = styled__default["default"].div(templateObject_7$1 || (template
     var theme = _a.theme;
     return theme.colors.primary;
 });
-var templateObject_1$h, templateObject_2$d, templateObject_3$8, templateObject_4$5, templateObject_5$3, templateObject_6$1, templateObject_7$1;
+var templateObject_1$h, templateObject_2$d, templateObject_3$8, templateObject_4$6, templateObject_5$3, templateObject_6$1, templateObject_7$1;
 
 var Icon$9 = function (props) {
     return (React__default["default"].createElement(Svg, __assign({ viewBox: "0 0 15 32", width: 15, height: 32 }, props),
@@ -1693,7 +1696,7 @@ var Icon$7 = function (props) {
 var rotate = styled.keyframes(templateObject_1$g || (templateObject_1$g = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var float = styled.keyframes(templateObject_2$c || (templateObject_2$c = __makeTemplateObject(["\n\t0% {\n\t\ttransform: translatey(0px);\n\t}\n\t50% {\n\t\ttransform: translatey(10px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t}\n"], ["\n\t0% {\n\t\ttransform: translatey(0px);\n\t}\n\t50% {\n\t\ttransform: translatey(10px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t}\n"])));
 var Container = styled__default["default"].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
-var RotatingPancakeIcon = styled__default["default"](Icon$7)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
+var RotatingPancakeIcon = styled__default["default"](Icon$7)(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
 var FloatingPanIcon = styled__default["default"](Icon$8)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), float);
 var Spinner = function (_a) {
     var _b = _a.size, size = _b === void 0 ? 128 : _b;
@@ -1701,7 +1704,7 @@ var Spinner = function (_a) {
         React__default["default"].createElement(RotatingPancakeIcon, { width: "".concat(size * 0.5, "px") }),
         React__default["default"].createElement(FloatingPanIcon, { width: "".concat(size, "px") })));
 };
-var templateObject_1$g, templateObject_2$c, templateObject_3$7, templateObject_4$4, templateObject_5$2;
+var templateObject_1$g, templateObject_2$c, templateObject_3$7, templateObject_4$5, templateObject_5$2;
 
 var animation = {
     WAVES: "waves",
@@ -1724,7 +1727,7 @@ var Root = styled__default["default"].div(templateObject_3$6 || (templateObject_
     var variant$1 = _a.variant, theme = _a.theme;
     return (variant$1 === variant.CIRCLE ? theme.radii.circle : theme.radii.small);
 }, styledSystem.layout, styledSystem.space);
-var Pulse = styled__default["default"](Root)(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"])), pulse);
+var Pulse = styled__default["default"](Root)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"])), pulse);
 var Waves = styled__default["default"](Root)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  position: relative;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  &:before {\n    content: \"\";\n    position: absolute;\n    background-image: linear-gradient(90deg, transparent, rgba(243, 243, 243, 0.5), transparent);\n    top: 0;\n    left: -150px;\n    height: 100%;\n    width: 150px;\n    animation: ", " 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;\n  }\n"], ["\n  position: relative;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  &:before {\n    content: \"\";\n    position: absolute;\n    background-image: linear-gradient(90deg, transparent, rgba(243, 243, 243, 0.5), transparent);\n    top: 0;\n    left: -150px;\n    height: 100%;\n    width: 150px;\n    animation: ", " 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;\n  }\n"])), waves);
 var Skeleton = function (_a) {
     var _b = _a.variant, variant$1 = _b === void 0 ? variant.RECT : _b, _c = _a.animation, animation$1 = _c === void 0 ? animation.PULSE : _c, props = __rest(_a, ["variant", "animation"]);
@@ -1733,7 +1736,7 @@ var Skeleton = function (_a) {
     }
     return React__default["default"].createElement(Pulse, __assign({ variant: variant$1 }, props));
 };
-var templateObject_1$f, templateObject_2$b, templateObject_3$6, templateObject_4$3, templateObject_5$1;
+var templateObject_1$f, templateObject_2$b, templateObject_3$6, templateObject_4$4, templateObject_5$1;
 
 var scaleKeyValues = {
     sm: {
@@ -2661,7 +2664,7 @@ var ModalHeader = styled__default["default"].div(templateObject_2$7 || (template
     return theme.mediaQueries.sm;
 });
 var ModalTitle = styled__default["default"](Flex)(templateObject_3$4 || (templateObject_3$4 = __makeTemplateObject(["\n  align-items: center;\n  justify-content: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  justify-content: center;\n  flex: 1;\n"])));
-var ModalBody$1 = styled__default["default"].div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  padding: 0 16px 24px;\n  \n  ", " {\n    padding: 0 24px 24px;\n  }\n"], ["\n  padding: 0 16px 24px;\n  \n  ", " {\n    padding: 0 24px 24px;\n  }\n"])), function (_a) {
+var ModalBody$1 = styled__default["default"].div(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  padding: 0 16px 24px;\n  \n  ", " {\n    padding: 0 24px 24px;\n  }\n"], ["\n  padding: 0 16px 24px;\n  \n  ", " {\n    padding: 0 24px 24px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.sm;
 });
@@ -2677,7 +2680,7 @@ var Modal = function (_a) {
                 React__default["default"].createElement(Icon$1d, { width: "24px", color: "contrast" })))),
         React__default["default"].createElement(ModalBody$1, null, children)));
 };
-var templateObject_1$b, templateObject_2$7, templateObject_3$4, templateObject_4$2;
+var templateObject_1$b, templateObject_2$7, templateObject_3$4, templateObject_4$3;
 
 var StyledModal = styled__default["default"].div(templateObject_1$a || (templateObject_1$a = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  border-radius: 16px 16px 0 0;  \n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  position: relative;\n  top: 0;\n  left: 0;\n  ", " {\n    width: auto;\n    min-width: 416px;\n    max-width: 100%;\n    border-radius: 16px;\n  }\n"], ["\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  border-radius: 16px 16px 0 0;  \n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  position: relative;\n  top: 0;\n  left: 0;\n  ", " {\n    width: auto;\n    min-width: 416px;\n    max-width: 100%;\n    border-radius: 16px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
@@ -2703,7 +2706,7 @@ var ModalBody = styled__default["default"].div(templateObject_3$3 || (templateOb
     var padding = _a.padding;
     return padding || '0 24px 24px';
 });
-var Background = styled__default["default"].img(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  width: 100%;\n"], ["\n  width: 100%;\n"])));
+var Background = styled__default["default"].img(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  width: 100%;\n"], ["\n  width: 100%;\n"])));
 var ModalWithBackground = function (_a) {
     var onDismiss = _a.onDismiss, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, backBtnColor = _a.backBtnColor, background = _a.background, p = _a.p;
     return (React__default["default"].createElement(StyledModal, null,
@@ -2712,7 +2715,7 @@ var ModalWithBackground = function (_a) {
         background && React__default["default"].createElement(Background, { src: background, alt: 'image' }),
         React__default["default"].createElement(ModalBody, { padding: p }, children)));
 };
-var templateObject_1$a, templateObject_2$6, templateObject_3$3, templateObject_4$1;
+var templateObject_1$a, templateObject_2$6, templateObject_3$3, templateObject_4$2;
 
 var Overlay = styled__default["default"].div.attrs({ role: "presentation" })(templateObject_1$9 || (templateObject_1$9 = __makeTemplateObject(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgb(10, 22, 43);\n  transition: opacity 0.4s;\n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"], ["\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgb(10, 22, 43);\n  transition: opacity 0.4s;\n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"])), function (_a) {
     var show = _a.show;
@@ -2832,7 +2835,7 @@ var ProgressWrapper = styled__default["default"].div(templateObject_3$2 || (temp
     var theme = _a.theme;
     return theme.colors.contrast;
 });
-var ProgressLine = styled__default["default"].div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 5px;\n  transition: 100ms all;\n  border-radius: 16px;\n"], ["\n  background-color: ", ";\n  height: 5px;\n  transition: 100ms all;\n  border-radius: 16px;\n"])), function (_a) {
+var ProgressLine = styled__default["default"].div(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 5px;\n  transition: 100ms all;\n  border-radius: 16px;\n"], ["\n  background-color: ", ";\n  height: 5px;\n  transition: 100ms all;\n  border-radius: 16px;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.success;
 });
@@ -2868,7 +2871,7 @@ var Toast = function (_a) {
                 React__default["default"].createElement("div", { style: { width: '100%' } },
                     React__default["default"].createElement(ProgressWrapper, { style: { width: '100%' } }, progress ? React__default["default"].createElement(ProgressLine, { style: { width: "".concat(100 - progress, "%") } }) : null))))));
 };
-var templateObject_1$6, templateObject_2$4, templateObject_3$2, templateObject_4, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
+var templateObject_1$6, templateObject_2$4, templateObject_3$2, templateObject_4$1, templateObject_5, templateObject_6, templateObject_7, templateObject_8, templateObject_9;
 
 var ZINDEX = 1000;
 var BOTTOM_POSITION = 35; // Initial position from the bottom
@@ -3204,6 +3207,10 @@ var Line = styled__default["default"].div(templateObject_3 || (templateObject_3 
     var theme = _a.theme;
     return theme.colors.dark;
 });
+var CopyText = styled__default["default"](Text)(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  \n  &:hover {\n    text-decoration: underline;\n    color: ", ";\n  }\n"], ["\n  \n  &:hover {\n    text-decoration: underline;\n    color: ", ";\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.colors.success;
+});
 var AccountModal = function (_a) {
     var transactionsForUIKit = _a.transactionsForUIKit, isSwap = _a.isSwap, account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, login = _a.login, recentTransaction = _a.recentTransaction, chainId = _a.chainId, clearTransaction = _a.clearTransaction;
     useWalletModal(login, logout, account, recentTransaction, chainId).onPresentConnectModal;
@@ -3224,7 +3231,7 @@ var AccountModal = function (_a) {
             React__default["default"].createElement(LinkExternal, { mr: '24px', small: true, href: "https://bscscan.com/address/".concat(account) },
                 React__default["default"].createElement(Text, { color: 'success', lineHeight: '20px', small: true, bold: true }, "View on BscScan")),
             React__default["default"].createElement(CopyToClipboard, { toCopy: account },
-                React__default["default"].createElement(Text, { color: 'success', lineHeight: '20px', small: true, bold: true }, "Copy Address"))),
+                React__default["default"].createElement(CopyText, { color: 'success', lineHeight: '20px', small: true, bold: true }, "Copy Address"))),
         isSwap && (React__default["default"].createElement(TransactionWrapper, null,
             React__default["default"].createElement(Flex, { justifyContent: 'space-between', alignItems: 'center' },
                 React__default["default"].createElement(Text, { fontSize: '14px', fontWeight: '600', lineHeight: '21px', color: '#07162D' }, "Recent transactions"),
@@ -3236,7 +3243,7 @@ var AccountModal = function (_a) {
                     onDismiss();
                 } }, "Logout"))));
 };
-var templateObject_1$1, templateObject_2, templateObject_3;
+var templateObject_1$1, templateObject_2, templateObject_3, templateObject_4;
 
 var useWalletModal = function (login, logout, account, recentTransaction, chainId, clearTransaction, isSwap, transactionsForUIKit) {
     var onPresentConnectModal = useModal(React__default["default"].createElement(ConnectModal, { login: login }))[0];
