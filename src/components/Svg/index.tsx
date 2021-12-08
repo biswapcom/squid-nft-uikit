@@ -84,6 +84,7 @@ export {default as HamburgerIcon} from './Icons/Hamburger'
 export {default as UserIcon} from './Icons/User'
 export {default as StarSharpIcon} from './Icons/StarSharp'
 export {default as HintIcon} from './Icons/Hint'
+export {default as DeleteIcon} from './Icons/Delete'
 
 
 export {default as FarmIcon} from './Icons/menu/Farm'
