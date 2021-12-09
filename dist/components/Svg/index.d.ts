@@ -85,6 +85,7 @@ export { default as UserIcon } from './Icons/User';
 export { default as StarSharpIcon } from './Icons/StarSharp';
 export { default as HintIcon } from './Icons/Hint';
 export { default as DeleteIcon } from './Icons/Delete';
+export { default as SendIcon } from './Icons/Send';
 export { default as FarmIcon } from './Icons/menu/Farm';
 export { default as PoolIcon } from './Icons/menu/Pool';
 export { default as NFTIcon } from './Icons/menu/NftNew';
