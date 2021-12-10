@@ -45,8 +45,8 @@ const Icon: React.FC<SvgProps> = (props) => {
               <ellipse cx="8.90547" cy="1.21241" rx="0.472973" ry="0.466321" fill="white"/>
           </g>
           <defs>
-              <filter id="filter0_iiiii_287_4829" x="1.63294" y="0.379035" width="14.6118" height="17.7433" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter0_iiiii_287_4829" x="1.63294" y="0.379035" width="14.6118" height="17.7433" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.122353"/>
@@ -79,8 +79,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.0954861 0 0 0 0 0.520833 0 0 0 0 0.462831 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect4_innerShadow_287_4829" result="effect5_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter1_d_287_4829" x="2.29799" y="2.09283" width="13.1142" height="15.7257" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter1_d_287_4829" x="2.29799" y="2.09283" width="13.1142" height="15.7257" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.489411"/>
                   <feGaussianBlur stdDeviation="0.550588"/>
@@ -89,8 +89,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_287_4829"/>
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_287_4829" result="shape"/>
               </filter>
-              <filter id="filter2_d_287_4829" x="4.79124" y="4.9" width="7.86118" height="2.17197" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter2_d_287_4829" x="4.79124" y="4.9" width="7.86118" height="2.17197" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dx="0.1" dy="0.1"/>
                   <feGaussianBlur stdDeviation="0.1"/>
@@ -98,8 +98,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_287_4829"/>
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_287_4829" result="shape"/>
               </filter>
-              <filter id="filter3_diiiii_287_4829" x="4.52418" y="4.63294" width="2.49903" height="2.85903" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter3_diiiii_287_4829" x="4.52418" y="4.63294" width="2.49903" height="2.85903" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -138,8 +138,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter4_diiiii_287_4829" x="7.50867" y="5.09925" width="5.20374" height="1.92641" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter4_diiiii_287_4829" x="7.50867" y="5.09925" width="5.20374" height="1.92641" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -178,8 +178,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter5_d_287_4829" x="4.79124" y="7.67197" width="7.86118" height="2.17197" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter5_d_287_4829" x="4.79124" y="7.67197" width="7.86118" height="2.17197" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dx="0.1" dy="0.1"/>
                   <feGaussianBlur stdDeviation="0.1"/>
@@ -187,8 +187,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_287_4829"/>
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_287_4829" result="shape"/>
               </filter>
-              <filter id="filter6_diiiii_287_4829" x="4.52418" y="7.40491" width="2.49903" height="2.85903" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter6_diiiii_287_4829" x="4.52418" y="7.40491" width="2.49903" height="2.85903" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -227,8 +227,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter7_diiiii_287_4829" x="7.50867" y="7.87122" width="5.20374" height="1.92641" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter7_diiiii_287_4829" x="7.50867" y="7.87122" width="5.20374" height="1.92641" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -267,8 +267,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter8_d_287_4829" x="4.79124" y="10.4439" width="7.86118" height="2.17197" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter8_d_287_4829" x="4.79124" y="10.4439" width="7.86118" height="2.17197" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dx="0.1" dy="0.1"/>
                   <feGaussianBlur stdDeviation="0.1"/>
@@ -276,8 +276,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_287_4829"/>
                   <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_287_4829" result="shape"/>
               </filter>
-              <filter id="filter9_diiiii_287_4829" x="4.52418" y="10.1769" width="2.49903" height="2.85903" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter9_diiiii_287_4829" x="4.52418" y="10.1769" width="2.49903" height="2.85903" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -316,8 +316,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter10_diiiii_287_4829" x="7.50867" y="10.6432" width="5.20374" height="1.92641" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter10_diiiii_287_4829" x="7.50867" y="10.6432" width="5.20374" height="1.92641" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -356,8 +356,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter11_iiiii_287_4829" x="5.495" y="-0.367058" width="6.69819" height="3.66043" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter11_iiiii_287_4829" x="5.495" y="-0.367058" width="6.69819" height="3.66043" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.122353"/>
@@ -390,8 +390,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.0954861 0 0 0 0 0.520833 0 0 0 0 0.462831 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect4_innerShadow_287_4829" result="effect5_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter12_diiiii_287_4829" x="5.32203" y="2.05787" width="7.15943" height="1.92641" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter12_diiiii_287_4829" x="5.32203" y="2.05787" width="7.15943" height="1.92641" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.36"/>
                   <feGaussianBlur stdDeviation="0.18"/>
@@ -430,8 +430,8 @@ const Icon: React.FC<SvgProps> = (props) => {
                   <feColorMatrix type="matrix" values="0 0 0 0 0.5375 0 0 0 0 1 0 0 0 0 0.936932 0 0 0 0.2 0"/>
                   <feBlend mode="normal" in2="effect5_innerShadow_287_4829" result="effect6_innerShadow_287_4829"/>
               </filter>
-              <filter id="filter13_d_287_4829" x="8.3325" y="0.746094" width="1.14592" height="1.13262" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <filter id="filter13_d_287_4829" x="8.3325" y="0.746094" width="1.14592" height="1.13262" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                  <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                   <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                   <feOffset dy="0.1"/>
                   <feGaussianBlur stdDeviation="0.05"/>
