@@ -53,10 +53,12 @@ export const Placement: React.FC = () => {
   // TOP
   const { targetRef: targetRefTopStart, tooltip: tooltipTopStart } = useTooltip("top-start", {
     placement: "top-start",
+      isLight: true
   });
   const { targetRef: targetRefTop, tooltip: tooltipTop } = useTooltip("top", { placement: "top" });
   const { targetRef: targetRefTopEnd, tooltip: tooltipTopEnd } = useTooltip("top-end", {
     placement: "top-end",
+      isLight: true
   });
   // LEFT
   const { targetRef: targetRefLeftStart, tooltip: tooltipLeftStart } = useTooltip("left-start", {

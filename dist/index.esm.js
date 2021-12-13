@@ -2924,28 +2924,28 @@ var isTouchDevice = function () {
 };
 
 var Arrow = styled.div(templateObject_1$c || (templateObject_1$c = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.tooltip.background;
+    var theme = _a.theme, isLight = _a.isLight;
+    return isLight ? '#FFFFFF' : theme.tooltip.background;
 });
 var StyledTooltip = styled.div(templateObject_2$8 || (templateObject_2$8 = __makeTemplateObject(["\n  padding: 8px 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 8px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 8px 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 8px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
-    var theme = _a.theme;
-    return theme.tooltip.background;
+    var theme = _a.theme, isLight = _a.isLight;
+    return isLight ? '#FFFFFF' : theme.tooltip.background;
 }, function (_a) {
     var theme = _a.theme;
     return theme.tooltip.text;
 }, function (_a) {
-    var theme = _a.theme;
-    return theme.tooltip.boxShadow;
+    var theme = _a.theme, isLight = _a.isLight;
+    return isLight ? 'none' : theme.tooltip.boxShadow;
 }, Arrow, Arrow, Arrow, Arrow);
 var templateObject_1$c, templateObject_2$8;
 
 var portalRoot = document.getElementById("portal-root");
 var useTooltip = function (content, options) {
-    var _a = options.placement, placement = _a === void 0 ? "auto" : _a, _b = options.trigger, trigger = _b === void 0 ? "hover" : _b, _c = options.arrowPadding, arrowPadding = _c === void 0 ? 16 : _c, _d = options.tooltipPadding, tooltipPadding = _d === void 0 ? { left: 16, right: 16 } : _d, _e = options.tooltipOffset, tooltipOffset = _e === void 0 ? [0, 10] : _e;
-    var _f = useState(null), targetElement = _f[0], setTargetElement = _f[1];
-    var _g = useState(null), tooltipElement = _g[0], setTooltipElement = _g[1];
-    var _h = useState(null), arrowElement = _h[0], setArrowElement = _h[1];
-    var _j = useState(false), visible = _j[0], setVisible = _j[1];
+    var _a = options.placement, placement = _a === void 0 ? "auto" : _a, _b = options.trigger, trigger = _b === void 0 ? "hover" : _b, _c = options.arrowPadding, arrowPadding = _c === void 0 ? 16 : _c, _d = options.tooltipPadding, tooltipPadding = _d === void 0 ? { left: 16, right: 16 } : _d, _e = options.tooltipOffset, tooltipOffset = _e === void 0 ? [0, 10] : _e, _f = options.isLight, isLight = _f === void 0 ? false : _f;
+    var _g = useState(null), targetElement = _g[0], setTargetElement = _g[1];
+    var _h = useState(null), tooltipElement = _h[0], setTooltipElement = _h[1];
+    var _j = useState(null), arrowElement = _j[0], setArrowElement = _j[1];
+    var _k = useState(false), visible = _k[0], setVisible = _k[1];
     var isHoveringOverTooltip = useRef(false);
     var hideTimeout = useRef();
     var hideTooltip = useCallback(function (e) {
@@ -3068,7 +3068,7 @@ var useTooltip = function (content, options) {
     // even on the iPhone 5 screen (320px wide), BUT in the storybook with the contrived example ScreenEdges example
     // iPhone 5 behaves differently overflowing beyound the edge. All paddings are identical so I have no idea why it is,
     // and fixing that seems like a very bad use of time.
-    var _k = usePopper(targetElement, tooltipElement, {
+    var _l = usePopper(targetElement, tooltipElement, {
         placement: placement,
         modifiers: [
             {
@@ -3078,10 +3078,10 @@ var useTooltip = function (content, options) {
             { name: "offset", options: { offset: tooltipOffset } },
             { name: "preventOverflow", options: { padding: tooltipPadding } },
         ],
-    }), styles = _k.styles, attributes = _k.attributes;
-    var tooltip = (React.createElement(StyledTooltip, __assign({ ref: setTooltipElement, style: styles.popper }, attributes.popper),
+    }), styles = _l.styles, attributes = _l.attributes;
+    var tooltip = (React.createElement(StyledTooltip, __assign({ isLight: isLight, ref: setTooltipElement, style: styles.popper }, attributes.popper),
         React.createElement(ThemeProvider, { theme: darkTheme }, content),
-        React.createElement(Arrow, { ref: setArrowElement, style: styles.arrow })));
+        React.createElement(Arrow, { isLight: isLight, ref: setArrowElement, style: styles.arrow })));
     var tooltipInPortal = portalRoot ? createPortal(tooltip, portalRoot) : null;
     return {
         targetRef: setTargetElement,
