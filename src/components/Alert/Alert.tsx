@@ -1,10 +1,7 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
-import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
 import ErrorIcon from "../Svg/Icons/Error";
-import BlockIcon from "../Svg/Icons/Block";
 import InfoIcon from "../Svg/Icons/Info";
-// import { Text } from "../Text";
 import { IconButton } from "../Button";
 import {CloseIcon, FailIcon, SuccessIcon} from "../Svg";
 import Flex from "../Box/Flex";
@@ -63,6 +60,7 @@ const Title = styled.div<ThemedIconLabel>`
   margin-bottom: 8px;
   margin-left: 16px;
   margin-right: 28px;
+  white-space: nowrap;
 
   svg {
     margin-right: 8px;
@@ -93,16 +91,9 @@ const StyledAlert = styled(Flex)<{ index: number }>`
   border-radius: 8px;
   box-shadow: 0 0 32px -8px rgba(0, 0, 13, 0.32), 0px 1px 1px rgba(0, 0, 0, 0.05);
   
-  &:nth-child(-n + 1) {
+  &:nth-child(n + 1) {
     width: ${({index}) => `calc(100% - ${index * 5}%)`};
   }
-
-  //@for $i from 1 through 7 {
-  //  &:nth-child(-#{$i} + 1) {
-  //    //width: calc(#{$i} * 10px);
-  //    background-color: red;
-  //  }
-  //}
 `;
 
 const Description = styled.p`

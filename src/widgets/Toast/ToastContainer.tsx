@@ -151,9 +151,17 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ clearAll,toasts, onRemo
       <TransitionGroup>
         {toasts.map((toast, index) => {
           const zIndex = (ZINDEX - index).toString();
-          const bottom = BOTTOM_POSITION + index * stackSpacing;
-          const removeButtonPosition = stackSpacing * toasts.length + 40;
-          if (index===0) return <Toast handleRemove={handleRemove}
+          const bottom = BOTTOM_POSITION + (index * stackSpacing);
+
+          if (index === 0) return <Toast
+              handleRemove={handleRemove}
+              index={index}
+              key={toast.id}
+              toast={toast}
+              style={{ bottom: `${bottom}px`, zIndex }}
+          />
+
+          if (index === toasts.length - 1) return <Toast
                            handleMouseEnter={handleMouseEnter}
                            handleMouseLeave={handleMouseLeave}
                            progress={progress}
@@ -161,7 +169,6 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ clearAll,toasts, onRemo
                            toast={toast}
                            zIndex={zIndex}
                            ttl={ttl}
-                           removeButtonPosition={removeButtonPosition}
                            clearAll={toasts.length > 1 ? clearAllHandler : undefined}
                            style={{ bottom: `${bottom}px`, zIndex,}}
                            index={index}

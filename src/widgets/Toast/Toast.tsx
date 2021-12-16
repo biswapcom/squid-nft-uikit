@@ -6,7 +6,7 @@ import { Text } from "../../components/Text";
 import ToastAction from "./ToastAction";
 import { ToastProps, types } from "./types";
 import { Button } from "../../components/Button";
-import { LinkIcon } from "../../components/Svg";
+import {CloseIcon} from "../../components/Svg";
 import OpenInNew from "../../components/Svg/Icons/OpenInNew";
 
 const alertTypeMap = {
@@ -16,14 +16,16 @@ const alertTypeMap = {
   [types.WARNING]: alertVariants.WARNING,
 };
 
-interface ClearButtonProps {
-  top: number;
-}
 
-const ClearAllButton = styled(Button)<ClearButtonProps>`
-  position: absolute;
-  right: 0;
-  top: ${({top}) => `${-top}px`};
+const ClearAllButton = styled.button`
+  position: relative;
+  background-color: ${({theme}) => theme.colors.failure};
+  border: none;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `
 
 const StyledToast = styled.div`
@@ -33,6 +35,11 @@ const StyledToast = styled.div`
   max-width: calc(100% - 12px);
   transition: all 250ms ease-in;
   width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   box-shadow: 0 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
@@ -110,13 +117,12 @@ const Toast: React.FC<ToastProps> = ({
         {
           clearAll && (
             <ClearAllButton
-              variant='text'
-               top={removeButtonPosition}
               onClick={() => clearAll()}
             >
-              <Text fontSize='16px' color='#1263F1' lineHeight='19px'>
+              <Text fontSize='10px' color='contrast' lineHeight='19px'>
                 Clear All
               </Text>
+                <CloseIcon color='contrast' ml='8px' width='10px'/>
             </ClearAllButton>
           )
         }
