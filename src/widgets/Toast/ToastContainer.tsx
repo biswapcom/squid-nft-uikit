@@ -163,14 +163,16 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ clearAll,toasts, onRemo
                            ttl={ttl}
                            removeButtonPosition={removeButtonPosition}
                            clearAll={toasts.length > 1 ? clearAllHandler : undefined}
-                           style={{ bottom: `${bottom}px`, zIndex }}
+                           style={{ bottom: `${bottom}px`, zIndex,}}
+                           index={index}
             />
 
           return (
             <Toast
+                index={index}
                    key={toast.id}
                    toast={toast}
-                   style={{ bottom: `${bottom}px`, zIndex }}
+                   style={{ bottom: `${bottom}px`, zIndex, display: 'flex', justifyContent: 'center' }}
             />
           );
         })}

@@ -19,9 +19,9 @@ export const Default: React.FC = () => {
     const randomToast = {
       id: `id-${now}`,
       title: `Title: ${now}`,
-      telegramDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_sharing",
-      tweeterDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_earn",
-      description,
+      // telegramDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_sharing",
+      // tweeterDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_earn",
+      description: `Player NFT minted for <strong>5.6 BSW</strong>`,
       hash: "hash",
       type: alertVariants[sample(Object.keys(alertVariants))],
     };
@@ -39,7 +39,7 @@ export const Default: React.FC = () => {
 
   return (
     <div>
-      <Button type="button" variant="secondary" onClick={() => handleClick()}>
+      <Button type="button" variant="secondary" onClick={() => handleClick('Player NFT minted for 5.6 BSW ')}>
         Random Toast
       </Button>
       <Button
@@ -69,8 +69,8 @@ export const WithAction: React.FC = () => {
       title: `Title: ${now}`,
       description: "Share your earnings on Twitter and win a part of <strong>$2200 in BSW</strong> Prize Pool for 202 winners every week!",
       hash: "aeafwa",
-      telegramDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_sharing",
-      tweeterDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_earn",
+      // telegramDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_sharing",
+      // tweeterDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_earn",
       type: alertVariants[sample(Object.keys(alertVariants))],
     };
 
