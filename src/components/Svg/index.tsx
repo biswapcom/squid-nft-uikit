@@ -89,6 +89,7 @@ export {default as SendIcon} from './Icons/Send'
 export {default as ContractIcon} from './Icons/Contract'
 export {default as PencilIcon} from './Icons/Pencil'
 export {default as TimerNewIcon} from './Icons/TimerNew'
+export {default as AddFilledIcon} from './Icons/AddFilled'
 
 
 export {default as FarmIcon} from './Icons/menu/Farm'
