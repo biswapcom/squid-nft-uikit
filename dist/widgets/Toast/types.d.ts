@@ -34,4 +34,5 @@ export interface ToastProps {
     clearAll?: () => void | undefined;
     zIndex?: string;
     removeButtonPosition?: number;
+    index: number;
 }

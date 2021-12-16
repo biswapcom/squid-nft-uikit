@@ -83,6 +83,8 @@ export { default as YouTubeIcon } from './Icons/YouTube';
 export { default as HamburgerIcon } from './Icons/Hamburger';
 export { default as UserIcon } from './Icons/User';
 export { default as StarSharpIcon } from './Icons/StarSharp';
+export { default as SuccessIcon } from './Icons/Success';
+export { default as FailIcon } from './Icons/Fail';
 export { default as FarmIcon } from './Icons/menu/Farm';
 export { default as PoolIcon } from './Icons/menu/Pool';
 export { default as NFTIcon } from './Icons/menu/NftNew';
