@@ -2875,6 +2875,8 @@ var baseColors = {
 var brandColors = {
     binance: "#F0B90B",
     polygon: "#8247E5",
+    telegram: "#239FDB",
+    twitter: "#1DA1F2",
 };
 var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#FAF9FA", contrast: "#191326", tertiary: "#151521", card: "#090913", dark: "#2B2B40", gray: "#4A4A60", light: "#7E829D", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
