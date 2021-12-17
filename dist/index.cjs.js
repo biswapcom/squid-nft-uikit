@@ -2893,7 +2893,7 @@ var Toast = function (_a) {
     return (React__default["default"].createElement(reactTransitionGroup.CSSTransition, __assign({ timeout: 250, style: style }, props),
         React__default["default"].createElement(StyledToast, { onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave },
             clearAll && (React__default["default"].createElement(ClearAllButton, { onClick: function () { return clearAll(); } },
-                React__default["default"].createElement(Text, { fontSize: '10px', color: 'contrast', lineHeight: '19px' }, "Clear All"),
+                React__default["default"].createElement(Text, { fontSize: '10px', color: 'contrast' }, "Clear All"),
                 React__default["default"].createElement(Icon$1g, { color: 'contrast', ml: '8px', width: '10px' }))),
             React__default["default"].createElement(Alert, { index: index, style: { padding: '16px 0 0 0' }, title: title, variant: alertTypeMap[type], onClick: handleRemove },
                 React__default["default"].createElement(AlertWrapper, null,
@@ -3011,9 +3011,9 @@ var ToastContainer = function (_a) {
             var zIndex = (ZINDEX - index).toString();
             var bottom = BOTTOM_POSITION + (index * stackSpacing);
             if (index === 0)
-                return React__default["default"].createElement(Toast, { handleRemove: handleRemove, index: index, key: toast.id, toast: toast, style: { bottom: "".concat(bottom, "px"), zIndex: zIndex } });
+                return React__default["default"].createElement(Toast, { handleMouseEnter: handleMouseEnter, handleMouseLeave: handleMouseLeave, progress: progress, ttl: ttl, handleRemove: handleRemove, index: index, key: toast.id, toast: toast, style: { bottom: "".concat(bottom, "px"), zIndex: zIndex } });
             if (index === toasts.length - 1)
-                return React__default["default"].createElement(Toast, { handleMouseEnter: handleMouseEnter, handleMouseLeave: handleMouseLeave, progress: progress, key: toast.id, toast: toast, zIndex: zIndex, ttl: ttl, clearAll: toasts.length > 1 ? clearAllHandler : undefined, style: { bottom: "".concat(bottom, "px"), zIndex: zIndex, }, index: index });
+                return React__default["default"].createElement(Toast, { key: toast.id, toast: toast, zIndex: zIndex, clearAll: toasts.length > 1 ? clearAllHandler : undefined, style: { bottom: "".concat(bottom, "px"), zIndex: zIndex, }, index: index });
             return (React__default["default"].createElement(Toast, { index: index, key: toast.id, toast: toast, style: { bottom: "".concat(bottom, "px"), zIndex: zIndex, display: 'flex', justifyContent: 'center' } }));
         }))));
 };

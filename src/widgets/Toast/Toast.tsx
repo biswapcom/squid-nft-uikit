@@ -119,7 +119,7 @@ const Toast: React.FC<ToastProps> = ({
             <ClearAllButton
               onClick={() => clearAll()}
             >
-              <Text fontSize='10px' color='contrast' lineHeight='19px'>
+              <Text fontSize='10px' color='contrast'>
                 Clear All
               </Text>
                 <CloseIcon color='contrast' ml='8px' width='10px'/>
