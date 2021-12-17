@@ -23,7 +23,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onDismiss }) => (
 );
 
 const CustomModalWithBackground: React.FC<InjectedProps> = ({  onDismiss }) => (
-  <ModalWithBackground background='background' backBtnColor='contrast' onDismiss={onDismiss}>
+  <ModalWithBackground backBtnColor='contrast' p='0' onDismiss={onDismiss}>
       <div>
         <Button>This button Does nothing</Button>
       </div>

@@ -6,6 +6,7 @@ import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
 import config, { walletLocalStorageKey } from "./config";
 import { Config, Login } from "./types";
+import Flex from "../../components/Box/Flex";
 
 interface Props {
   login: Login;
@@ -17,14 +18,18 @@ const HelpLink = styled(Link)`
   align-self: center;
   align-items: center;
   margin-top: 24px;
+  color: ${({ theme }) => theme.colors.success};
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled(Flex)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const WalletCardsWrapper = styled.div`
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 8px;
   width: 100%;
   grid-template-columns: repeat(2, 1fr);
 `
@@ -70,7 +75,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
             href="https://docs.biswap.org/faq/biswap-platform#how-do-i-connect-my-wallet-to-biswap"
             external
           >
-            <HelpIcon color="primary" mr="6px" />
+            <HelpIcon color="success" mr="6px" />
             Learn how to connect
           </HelpLink>
         </Wrapper>

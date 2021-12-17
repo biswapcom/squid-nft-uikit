@@ -16,6 +16,7 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
     arrowPadding = 16,
     tooltipPadding = { left: 16, right: 16 },
     tooltipOffset = [0, 10],
+    isLight = false
   } = options;
   const [targetElement, setTargetElement] = useState<HTMLElement | null>(null);
   const [tooltipElement, setTooltipElement] = useState<HTMLElement | null>(null);
@@ -177,9 +178,9 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
   });
 
   const tooltip = (
-    <StyledTooltip ref={setTooltipElement} style={styles.popper} {...attributes.popper}>
+    <StyledTooltip isLight={isLight} ref={setTooltipElement} style={styles.popper} {...attributes.popper}>
       <ThemeProvider theme={dark}>{content}</ThemeProvider>
-      <Arrow ref={setArrowElement} style={styles.arrow} />
+      <Arrow isLight={isLight} ref={setArrowElement} style={styles.arrow} />
     </StyledTooltip>
   );
 

@@ -9,6 +9,7 @@ interface Props extends InjectedProps {
   hideCloseButton?: boolean;
   backBtnColor?: string;
   background?: string
+  p?: string
 }
 
 const StyledModal = styled.div`
@@ -44,11 +45,11 @@ const StyledIconButton = styled(IconButton)`
 `;
 
 
-const ModalBody = styled.div`
-  padding: 0 16px 24px;
-  
+const ModalBody = styled.div<{padding?: string}>`
+  padding: ${({ padding }) => padding || '0 16px 24px'};
+
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 0 32px 32px;
+    padding: ${({ padding }) => padding || '0 24px 24px'};
   }
 `
 
@@ -61,7 +62,8 @@ const ModalWithBackground: React.FC<Props> = ({
                                                 children,
                                                 hideCloseButton = false,
                                                 backBtnColor,
-                                                background
+                                                background,
+                                                p
                                               }) => (
   <StyledModal>
     {!hideCloseButton && (
@@ -69,8 +71,8 @@ const ModalWithBackground: React.FC<Props> = ({
         <CloseIcon width="24px" color={backBtnColor ?? "card"} />
       </StyledIconButton>
     )}
-    <Background src={background} alt='image' />
-    <ModalBody>
+      {background && <Background src={background} alt='image' />}
+      <ModalBody padding={p}>
       {children}
     </ModalBody>
   </StyledModal>
