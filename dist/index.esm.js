@@ -3129,7 +3129,7 @@ var Modal = function (_a) {
                     React.createElement(Icon$1B, { color: "contrast" }))),
                 React.createElement(Heading, null, title)),
             !hideCloseButton && (React.createElement(IconButton, { variant: "text", className: "closeModal", scale: "sm", ml: "12px", onClick: onDismiss, "aria-label": "Close the dialog" },
-                React.createElement(Icon$1k, { width: "24px", color: "contrast" })))),
+                React.createElement(Icon$1k, { width: "24px", viewBox: "0 0 24 24", color: "contrast" })))),
         React.createElement(ModalBody$1, null, children)));
 };
 var templateObject_1$b, templateObject_2$7, templateObject_3$4, templateObject_4$3;
