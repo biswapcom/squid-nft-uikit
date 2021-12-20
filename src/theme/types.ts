@@ -54,6 +54,8 @@ export type Colors = {
   // Brand colors
   binance: string;
   polygon: string;
+  telegram: string;
+  twitter: string;
 };
 
 export type ZIndices = {

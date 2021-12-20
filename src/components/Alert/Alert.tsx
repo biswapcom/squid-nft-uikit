@@ -1,12 +1,9 @@
 import React from "react";
 import styled, { DefaultTheme } from "styled-components";
-import CheckmarkCircleIcon from "../Svg/Icons/CheckmarkCircle";
 import ErrorIcon from "../Svg/Icons/Error";
-import BlockIcon from "../Svg/Icons/Block";
 import InfoIcon from "../Svg/Icons/Info";
-// import { Text } from "../Text";
 import { IconButton } from "../Button";
-import { CloseIcon } from "../Svg";
+import {CloseIcon, FailIcon, SuccessIcon} from "../Svg";
 import Flex from "../Box/Flex";
 import { AlertProps, variants } from "./types";
 
@@ -33,11 +30,11 @@ const getThemeColor = ({ theme, variant = variants.INFO }: ThemedIconLabel) => {
 const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
   switch (variant) {
     case variants.DANGER:
-      return BlockIcon;
+      return FailIcon;
     case variants.WARNING:
       return ErrorIcon;
     case variants.SUCCESS:
-      return CheckmarkCircleIcon;
+      return SuccessIcon;
     case variants.INFO:
     default:
       return InfoIcon;
@@ -59,10 +56,11 @@ const Title = styled.div<ThemedIconLabel>`
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 8px;
   margin-left: 16px;
   margin-right: 28px;
+  white-space: nowrap;
 
   svg {
     margin-right: 8px;
@@ -86,12 +84,16 @@ const CloseHandler = styled.div`
   top: 8px;
 `;
 
-const StyledAlert = styled(Flex)`
+const StyledAlert = styled(Flex)<{ index: number }>`
   position: relative;
   overflow: hidden;
   background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 0 32px -8px rgba(0, 0, 13, 0.32), 0px 1px 1px rgba(0, 0, 0, 0.05);
+  
+  &:nth-child(n + 1) {
+    width: ${({index}) => `calc(100% - ${index * 5}%)`};
+  }
 `;
 
 const Description = styled.p`
@@ -103,15 +105,14 @@ const Description = styled.p`
   margin: 0;
 `;
 
-const Alert: React.FC<AlertProps> = ({style, title, children, variant, onClick }) => {
+const Alert: React.FC<AlertProps> = ({style, title, children, variant, onClick, index }) => {
   const Icon = getIcon(variant);
 
   return (
-    <StyledAlert >
+    <StyledAlert index={index}>
       <Details style={style} hasHandler={!!onClick}>
         <Title variant={variant} hasDescription={!!children}>
-          <Icon color="currentColor" width="24px" />
-
+          <Icon color="currentColor" mr='10px' width="24px" />
           <span>{title}</span>
         </Title>
         {typeof children === "string" ? <Description>{children}</Description> : children}
@@ -119,7 +120,7 @@ const Alert: React.FC<AlertProps> = ({style, title, children, variant, onClick }
       {onClick && (
         <CloseHandler>
           <IconButton scale="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="24px" color="currentColor" />
+            <CloseIcon width="14px" color="background" />
           </IconButton>
         </CloseHandler>
       )}

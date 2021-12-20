@@ -23,7 +23,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   width: ${getScale};
   vertical-align: middle;
   transition: background-color 0.2s ease-in-out;
-  border: 0;
+  border:  ${({ theme, isBorder }) => isBorder ? `1px solid ${theme.colors.success}` : 'none'};
   border-radius: ${({ scale }) => scale === 'xs' ? '4px' : '8px'};
   background-color: ${({ theme }) => theme.colors.tertiary};
   box-shadow: ${({ theme }) => theme.shadows.inset};
@@ -42,6 +42,7 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
     margin: auto;
     transform: rotate(-50deg);
     transition: border-color 0.2s ease-in-out;
+    fill: ${({ theme }) => theme.colors.primary};
   }
 
   // &:hover:not(:disabled):not(:checked) {
@@ -54,9 +55,9 @@ const Checkbox = styled.input.attrs({ type: "checkbox" })<CheckboxProps>`
   }
 
   &:checked {
-    background-color: ${({ theme }) => theme.colors.success};
+    background-color: ${({ theme, isBorder }) => isBorder ? theme.colors.card : theme.colors.success};
     &:after {
-      border-color: ${({ theme }) => theme.colors.contrast};
+      border-color: ${({ theme, isBorder}) => isBorder ? theme.colors.success : theme.colors.contrast};
     }
   }
 

@@ -10,6 +10,8 @@ export const baseColors = {
 export const brandColors = {
   binance: "#F0B90B",
   polygon: "#8247E5",
+  telegram: "#239FDB",
+  twitter: "#1DA1F2",
 };
 
 export const lightColors: Colors = {
