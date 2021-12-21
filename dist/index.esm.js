@@ -151,7 +151,7 @@ var styleVariants$2 = (_b$1 = {},
         boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
         color: "contrast",
         ":hover": {
-            backgroundColor: "#007B5D",
+            backgroundColor: "#2ED5AC",
             boxShadow: "inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
         },
     },
@@ -1619,11 +1619,11 @@ var getColor = function (_a) {
     var color = _a.color, theme = _a.theme;
     return getThemeValue("colors.".concat(color), color)(theme);
 };
-var getFontSize = function (_a) {
+var getFontSize$1 = function (_a) {
     var fontSize = _a.fontSize, small = _a.small;
     return small ? "14px" : fontSize || "16px";
 };
-var Text = styled.span(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  display: block;\n  color: ", ";\n  font-size: ", ";\n  vertical-align: middle;\n  font-weight: ", ";\n  line-height: ", ";\n  ", "\n  ", "\n  ", "\n"], ["\n  display: block;\n  color: ", ";\n  font-size: ", ";\n  vertical-align: middle;\n  font-weight: ", ";\n  line-height: ", ";\n  ", "\n  ", "\n  ", "\n"])), getColor, getFontSize, function (_a) {
+var Text = styled.span(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  display: block;\n  color: ", ";\n  font-size: ", ";\n  vertical-align: middle;\n  font-weight: ", ";\n  line-height: ", ";\n  ", "\n  ", "\n  ", "\n"], ["\n  display: block;\n  color: ", ";\n  font-size: ", ";\n  vertical-align: middle;\n  font-weight: ", ";\n  line-height: ", ";\n  ", "\n  ", "\n  ", "\n"])), getColor, getFontSize$1, function (_a) {
     var bold = _a.bold;
     return (bold ? 600 : 400);
 }, function (_a) {
@@ -1792,16 +1792,28 @@ var getHeight = function (_a) {
             return "40px";
     }
 };
-var Input$1 = styled.input(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 8px;\n  border-color: ", ";\n  color: ", ";\n  border-width: ", ";\n  box-shadow: none;\n  border-style: solid;\n  display: block;\n  font-size: 12px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  &:focus:not(:disabled) {\n    border-color: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 8px;\n  border-color: ", ";\n  color: ", ";\n  border-width: ", ";\n  box-shadow: none;\n  border-style: solid;\n  display: block;\n  font-size: 12px;\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  &:focus:not(:disabled) {\n    border-color: ", ";\n  }\n"])), function (_a) {
+var getFontSize = function (_a) {
+    var _b = _a.scale, scale = _b === void 0 ? scales$3.MD : _b;
+    switch (scale) {
+        case scales$3.SM:
+            return "12px";
+        case scales$3.LG:
+            return "14px";
+        case scales$3.MD:
+        default:
+            return "16px";
+    }
+};
+var Input$1 = styled.input(templateObject_1$q || (templateObject_1$q = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 8px;\n  border-color: ", ";\n  color: ", ";\n  border-width: ", ";\n  box-shadow: none;\n  border-style: solid;\n  display: block;\n  font-size: ", ";\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  transition: border-color .3s ease;\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  &:focus:not(:disabled) {\n    border-color: ", ";\n  }\n  &:hover:not(:disabled) {\n    border-color: ", ";\n  }\n"], ["\n  background-color: ", ";\n  border-radius: 8px;\n  border-color: ", ";\n  color: ", ";\n  border-width: ", ";\n  box-shadow: none;\n  border-style: solid;\n  display: block;\n  font-size: ", ";\n  height: ", ";\n  outline: 0;\n  padding: 0 16px;\n  width: 100%;\n  transition: border-color .3s ease;\n\n  &::placeholder {\n    color: ", ";\n  }\n\n  &:disabled {\n    background-color: ", ";\n    box-shadow: none;\n    color: ", ";\n    cursor: not-allowed;\n  }\n\n  &:focus:not(:disabled) {\n    border-color: ", ";\n  }\n  &:hover:not(:disabled) {\n    border-color: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme, isLight = _a.isLight;
-    return (isLight ? 'transparent' : theme.colors.gray);
+    return (isLight ? 'transparent' : theme.colors.card);
 }, getBorderColor, function (_a) {
     var theme = _a.theme, isLight = _a.isLight;
-    return (isLight ? theme.colors.light : theme.colors.light);
+    return (isLight ? theme.colors.light : theme.colors.contrast);
 }, function (_a) {
     var isLight = _a.isLight;
     return (isLight ? '0px' : '1px');
-}, getHeight, function (_a) {
+}, getFontSize, getHeight, function (_a) {
     var theme = _a.theme;
     return theme.colors.light;
 }, function (_a) {
@@ -1812,7 +1824,10 @@ var Input$1 = styled.input(templateObject_1$q || (templateObject_1$q = __makeTem
     return theme.colors.gray;
 }, function (_a) {
     var theme = _a.theme;
-    return theme.colors.primary;
+    return theme.colors.gray;
+}, function (_a) {
+    var theme = _a.theme;
+    return theme.colors.light;
 });
 Input$1.defaultProps = {
     scale: scales$3.MD,

@@ -31,21 +31,33 @@ const getHeight = ({ scale = scales.MD }: StyledInputProps) => {
       return "40px";
   }
 };
+const getFontSize = ({ scale = scales.MD }: StyledInputProps) => {
+  switch (scale) {
+    case scales.SM:
+      return "12px";
+    case scales.LG:
+      return "14px";
+    case scales.MD:
+    default:
+      return "16px";
+  }
+};
 
 const Input = styled.input<InputProps>`
-  background-color: ${({ theme, isLight }) => ( isLight ? 'transparent' : theme.colors.gray )};
+  background-color: ${({ theme, isLight }) => ( isLight ? 'transparent' : theme.colors.card )};
   border-radius: 8px;
   border-color: ${getBorderColor};
-  color: ${({ theme, isLight }) => ( isLight ? theme.colors.light : theme.colors.light )};
+  color: ${({ theme, isLight }) => ( isLight ? theme.colors.light : theme.colors.contrast )};
   border-width: ${({ isLight }) => ( isLight ? '0px' : '1px' )};
   box-shadow: none;
   border-style: solid;
   display: block;
-  font-size: 12px;
+  font-size: ${getFontSize};
   height: ${getHeight};
   outline: 0;
   padding: 0 16px;
   width: 100%;
+  transition: border-color .3s ease;
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.light};
@@ -59,7 +71,10 @@ const Input = styled.input<InputProps>`
   }
 
   &:focus:not(:disabled) {
-    border-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.gray};
+  }
+  &:hover:not(:disabled) {
+    border-color: ${({ theme }) => theme.colors.light};
   }
 `;
 
