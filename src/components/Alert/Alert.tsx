@@ -60,7 +60,8 @@ const Title = styled.div<ThemedIconLabel>`
   margin-bottom: 8px;
   margin-left: 16px;
   margin-right: 28px;
-  white-space: nowrap;
+  margin-bottom: 12px;
+  //white-space: nowrap;
 
   svg {
     margin-right: 8px;

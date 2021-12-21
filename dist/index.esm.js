@@ -1350,7 +1350,7 @@ var getIcon = function (variant) {
 //     fill: ${getThemeColor};
 //   }
 // `;
-var Title = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  font-weight: 600;\n  font-size: 14px;\n  margin-bottom: 8px;\n  margin-left: 16px;\n  margin-right: 28px;\n  white-space: nowrap;\n\n  svg {\n    margin-right: 8px;\n    fill: ", ";\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  font-weight: 600;\n  font-size: 14px;\n  margin-bottom: 8px;\n  margin-left: 16px;\n  margin-right: 28px;\n  white-space: nowrap;\n\n  svg {\n    margin-right: 8px;\n    fill: ", ";\n  }\n"])), getThemeColor);
+var Title = styled.div(templateObject_1$E || (templateObject_1$E = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  font-weight: 600;\n  font-size: 14px;\n  margin-bottom: 8px;\n  margin-left: 16px;\n  margin-right: 28px;\n  margin-bottom: 12px;\n  //white-space: nowrap;\n\n  svg {\n    margin-right: 8px;\n    fill: ", ";\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  font-weight: 600;\n  font-size: 14px;\n  margin-bottom: 8px;\n  margin-left: 16px;\n  margin-right: 28px;\n  margin-bottom: 12px;\n  //white-space: nowrap;\n\n  svg {\n    margin-right: 8px;\n    fill: ", ";\n  }\n"])), getThemeColor);
 var withHandlerSpacing = 32 + 12 + 8; // button size + inner spacing + handler position
 var Details = styled.div(templateObject_2$l || (templateObject_2$l = __makeTemplateObject(["\n  flex: 1;\n  padding-bottom: 16px;\n  padding-left: 16px;\n  padding-right: ", ";\n  padding-top: 16px;\n"], ["\n  flex: 1;\n  padding-bottom: 16px;\n  padding-left: 16px;\n  padding-right: ", ";\n  padding-top: 16px;\n"])), function (_a) {
     var hasHandler = _a.hasHandler;
