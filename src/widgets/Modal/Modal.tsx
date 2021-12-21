@@ -45,6 +45,7 @@ const ModalTitle = styled(Flex)`
   align-items: center;
   justify-content: center;
   flex: 1;
+  padding-left: 36px;
 `;
 
 const ModalBody = styled.div`
