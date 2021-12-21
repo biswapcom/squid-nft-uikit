@@ -18,11 +18,11 @@ export const Default: React.FC = () => {
     const now = Date.now()
     const randomToast = {
       id: `id-${now}`,
-      title: `Title: ${now}`,
+      title: `Player NFT min5.6 BSW `,
       // telegramDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_sharing",
       // tweeterDescription: "Share your earnings on Biswap and win a part of $2530 in BSW Prize Pool for 253 winners every week! #biswap_earn",
-      description: `Player NFT minted for <strong>5.6 BSW</strong>`,
-      hash: "hash",
+      // description: `Player NFT minted for <strong>5.6 BSW</strong>`,
+      // hash: "hash",
       type: alertVariants[sample(Object.keys(alertVariants))],
     };
 
@@ -39,7 +39,7 @@ export const Default: React.FC = () => {
 
   return (
     <div>
-      <Button type="button" variant="secondary" onClick={() => handleClick('Player NFT minted for 5.6 BSW ')}>
+      <Button type="button" variant="secondary" onClick={() => handleClick('Player NFT minted for 5.6 BSW aoqidjao dhaibfvca iyfvaohjpi ')}>
         Random Toast
       </Button>
       <Button
