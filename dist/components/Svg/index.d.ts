@@ -97,5 +97,6 @@ export { default as PoolIcon } from './Icons/menu/Pool';
 export { default as NFTIcon } from './Icons/menu/NftNew';
 export { default as ReferralIcon } from './Icons/menu/Referral';
 export { default as TicketIcon } from './Icons/menu/Ticket';
+export * as SocialIcons from './SocialIcons';
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";
