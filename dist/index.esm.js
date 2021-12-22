@@ -4142,7 +4142,10 @@ var HelpLink = styled(Link)(templateObject_1$3 || (templateObject_1$3 = __makeTe
     var theme = _a.theme;
     return theme.colors.success;
 });
-var Wrapper = styled(Flex)(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"], ["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"])));
+var Wrapper = styled(Flex)(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding-bottom: 64px;\n  \n  ", " {\n    padding-bottom: 0;\n  }\n"], ["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding-bottom: 64px;\n  \n  ", " {\n    padding-bottom: 0;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.sm;
+});
 var WalletCardsWrapper = styled.div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  display: grid;\n  grid-gap: 8px;\n  width: 100%;\n  grid-template-columns: repeat(2, 1fr);\n"], ["\n  display: grid;\n  grid-gap: 8px;\n  width: 100%;\n  grid-template-columns: repeat(2, 1fr);\n"])));
 var getPreferredConfig = function (walletConfig) {
     var preferredWalletName = localStorage.getItem(walletLocalStorageKey);
@@ -4215,6 +4218,8 @@ var CopyText = styled(Text)(templateObject_4 || (templateObject_4 = __makeTempla
 var AccountModal = function (_a) {
     var transactionsForUIKit = _a.transactionsForUIKit, isSwap = _a.isSwap, account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, login = _a.login, recentTransaction = _a.recentTransaction, chainId = _a.chainId, clearTransaction = _a.clearTransaction;
     useWalletModal(login, logout, account, recentTransaction, chainId).onPresentConnectModal;
+    var _c = useMatchBreakpoints(), isXs = _c.isXs, isSm = _c.isSm;
+    var isMobile = isXs || isSm;
     var ClearAndDismiss = function () {
         clearTransaction();
         onDismiss();
@@ -4238,7 +4243,7 @@ var AccountModal = function (_a) {
                 React.createElement(Text, { fontSize: '14px', fontWeight: '600', lineHeight: '21px', color: '#07162D' }, "Recent transactions"),
                 React.createElement(Button, { m: 0, p: 0, scale: 'sm', variant: 'text', onClick: ClearAndDismiss }, "Clear All")),
             React.createElement(React.Fragment, null, transactionsForUIKit()))),
-        React.createElement(Flex, null,
+        React.createElement(Flex, { mb: isMobile ? '64px' : '0' },
             React.createElement(Button, { style: { width: '100%' }, mt: '24px', variant: "primary", onClick: function () {
                     logout();
                     onDismiss();

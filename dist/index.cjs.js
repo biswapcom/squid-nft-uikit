@@ -4154,7 +4154,10 @@ var HelpLink = styled__default["default"](Link)(templateObject_1$3 || (templateO
     var theme = _a.theme;
     return theme.colors.success;
 });
-var Wrapper = styled__default["default"](Flex)(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"], ["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"])));
+var Wrapper = styled__default["default"](Flex)(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject(["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding-bottom: 64px;\n  \n  ", " {\n    padding-bottom: 0;\n  }\n"], ["\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  padding-bottom: 64px;\n  \n  ", " {\n    padding-bottom: 0;\n  }\n"])), function (_a) {
+    var theme = _a.theme;
+    return theme.mediaQueries.sm;
+});
 var WalletCardsWrapper = styled__default["default"].div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  display: grid;\n  grid-gap: 8px;\n  width: 100%;\n  grid-template-columns: repeat(2, 1fr);\n"], ["\n  display: grid;\n  grid-gap: 8px;\n  width: 100%;\n  grid-template-columns: repeat(2, 1fr);\n"])));
 var getPreferredConfig = function (walletConfig) {
     var preferredWalletName = localStorage.getItem(walletLocalStorageKey);
@@ -4227,6 +4230,8 @@ var CopyText = styled__default["default"](Text)(templateObject_4 || (templateObj
 var AccountModal = function (_a) {
     var transactionsForUIKit = _a.transactionsForUIKit, isSwap = _a.isSwap, account = _a.account, logout = _a.logout, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, login = _a.login, recentTransaction = _a.recentTransaction, chainId = _a.chainId, clearTransaction = _a.clearTransaction;
     useWalletModal(login, logout, account, recentTransaction, chainId).onPresentConnectModal;
+    var _c = useMatchBreakpoints(), isXs = _c.isXs, isSm = _c.isSm;
+    var isMobile = isXs || isSm;
     var ClearAndDismiss = function () {
         clearTransaction();
         onDismiss();
@@ -4250,7 +4255,7 @@ var AccountModal = function (_a) {
                 React__default["default"].createElement(Text, { fontSize: '14px', fontWeight: '600', lineHeight: '21px', color: '#07162D' }, "Recent transactions"),
                 React__default["default"].createElement(Button, { m: 0, p: 0, scale: 'sm', variant: 'text', onClick: ClearAndDismiss }, "Clear All")),
             React__default["default"].createElement(React__default["default"].Fragment, null, transactionsForUIKit()))),
-        React__default["default"].createElement(Flex, null,
+        React__default["default"].createElement(Flex, { mb: isMobile ? '64px' : '0' },
             React__default["default"].createElement(Button, { style: { width: '100%' }, mt: '24px', variant: "primary", onClick: function () {
                     logout();
                     onDismiss();

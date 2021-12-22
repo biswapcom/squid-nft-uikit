@@ -25,6 +25,11 @@ const Wrapper = styled(Flex)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 64px;
+  
+  ${({ theme }) => theme.mediaQueries.sm} {
+    padding-bottom: 0;
+  }
 `
 
 const WalletCardsWrapper = styled.div`
