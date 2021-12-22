@@ -14,7 +14,7 @@ export const Default: React.FC = () => {
         <Checkbox />
       </div>
       <div>
-        <Checkbox scale="sm" />
+        <Checkbox scale="xs" isBorder />
       </div>
         <div>
             <Checkbox scale="xs" />

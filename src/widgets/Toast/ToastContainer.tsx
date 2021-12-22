@@ -5,7 +5,7 @@ import Toast from "./Toast";
 import { ToastContainerProps } from "./types";
 
 const ZINDEX = 1000;
-const BOTTOM_POSITION = 35; // Initial position from the bottom
+const BOTTOM_POSITION = 120; // Initial position from the bottom
 
 const StyledToastContainer = styled.div`
   .enter,
@@ -151,26 +151,35 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ clearAll,toasts, onRemo
       <TransitionGroup>
         {toasts.map((toast, index) => {
           const zIndex = (ZINDEX - index).toString();
-          const bottom = BOTTOM_POSITION + index * stackSpacing;
-          const removeButtonPosition = stackSpacing * toasts.length + 40;
-          if (index===0) return <Toast handleRemove={handleRemove}
-                           handleMouseEnter={handleMouseEnter}
-                           handleMouseLeave={handleMouseLeave}
-                           progress={progress}
+          const bottom = BOTTOM_POSITION + (index * stackSpacing);
+
+          if (index === 0) return <Toast
+              handleMouseEnter={handleMouseEnter}
+              handleMouseLeave={handleMouseLeave}
+              progress={progress}
+              ttl={ttl}
+              handleRemove={handleRemove}
+              index={index}
+              key={toast.id}
+              toast={toast}
+              style={{ bottom: `${bottom}px`, zIndex }}
+          />
+
+          if (index === toasts.length - 1) return <Toast
                            key={toast.id}
                            toast={toast}
                            zIndex={zIndex}
-                           ttl={ttl}
-                           removeButtonPosition={removeButtonPosition}
                            clearAll={toasts.length > 1 ? clearAllHandler : undefined}
-                           style={{ bottom: `${bottom}px`, zIndex }}
+                           style={{ bottom: `${bottom}px`, zIndex,}}
+                           index={index}
             />
 
           return (
             <Toast
+                index={index}
                    key={toast.id}
                    toast={toast}
-                   style={{ bottom: `${bottom}px`, zIndex }}
+                   style={{ bottom: `${bottom}px`, zIndex, display: 'flex', justifyContent: 'center' }}
             />
           );
         })}

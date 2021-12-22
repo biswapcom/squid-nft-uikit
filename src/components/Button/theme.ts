@@ -38,7 +38,7 @@ export const styleVariants = {
     boxShadow: "0px 6px 24px rgba(30, 187, 149, 0.32), inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
     color: "contrast",
     ":hover": {
-      backgroundColor: "#007B5D",
+      backgroundColor: "#2ED5AC",
       boxShadow: "inset 0px 1px 0.5px #1EBB95, inset 0px -2px 1px #007B5D",
     },
   },
@@ -62,7 +62,7 @@ export const styleVariants = {
     color: "contrast",
     // boxShadow: "inset 0px 1px 0.5px #212131, inset 0px -2px 1px #0A0A11",
     ":hover": {
-      backgroundColor: "#141422",
+      backgroundColor: "#46465F",
     },
   },
   [variants.TEXT]: {

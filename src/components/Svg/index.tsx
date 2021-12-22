@@ -82,7 +82,18 @@ export {default as MediumIcon} from './Icons/Medium'
 export {default as YouTubeIcon} from './Icons/YouTube'
 export {default as HamburgerIcon} from './Icons/Hamburger'
 export {default as UserIcon} from './Icons/User'
+export {default as HintIcon} from './Icons/Hint'
+export {default as DeleteIcon} from './Icons/Delete'
+export {default as SendIcon} from './Icons/Send'
+export {default as ContractIcon} from './Icons/Contract'
+export {default as PencilIcon} from './Icons/Pencil'
+export {default as TimerNewIcon} from './Icons/TimerNew'
+export {default as AddFilledIcon} from './Icons/AddFilled'
 export {default as StarSharpIcon} from './Icons/StarSharp'
+export {default as SuccessIcon} from './Icons/Success'
+export {default as FailIcon} from './Icons/Fail'
+export {default as PlayIcon} from './Icons/Play'
+export {default as BswIcon} from './Icons/Bsw'
 
 
 export {default as FarmIcon} from './Icons/menu/Farm'
@@ -91,7 +102,7 @@ export {default as NFTIcon} from './Icons/menu/NftNew'
 export {default as ReferralIcon} from './Icons/menu/Referral'
 export {default as TicketIcon} from './Icons/menu/Ticket'
 
-
+export * as SocialIcons  from './SocialIcons'
 
 export { default as Svg } from "./Svg";
 export type { SvgProps } from "./types";

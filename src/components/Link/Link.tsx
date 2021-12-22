@@ -10,6 +10,7 @@ const StyledLink = styled(Text)<LinkProps>`
   width: fit-content;
   &:hover {
     text-decoration: underline;
+    color: ${({ theme }) => theme.colors.success};
   }
 `;
 

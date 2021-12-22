@@ -1,20 +1,23 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {DefaultTheme} from "styled-components";
 import Heading from "../../components/Heading/Heading";
 import Flex from "../../components/Box/Flex";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { InjectedProps } from "./types";
+import getThemeValue from "../../util/getThemeValue";
+import {TextProps} from "../../components/Text";
 
 interface Props extends InjectedProps {
   title: string;
   hideCloseButton?: boolean;
   onBack?: () => void;
+  background?: string
 }
 
-const StyledModal = styled.div`
-  background-color: #25252C;
-  border-radius: 16px 16px 0 0;  
+const StyledModal = styled.div<{background?: string}>`
+  background-color: ${({ theme, background }) => background || theme.colors.tertiary};
+  border-radius: 16px 16px 0 0;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
@@ -32,7 +35,7 @@ const ModalHeader = styled.div`
   padding: 24px 16px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 32px 32px 24px;
+    padding: 24px;
   }
   
   .closeModal {
@@ -45,13 +48,14 @@ const ModalTitle = styled(Flex)`
   align-items: center;
   justify-content: center;
   flex: 1;
+  padding-left: 36px;
 `;
 
 const ModalBody = styled.div`
   padding: 0 16px 24px;
   
   ${({ theme }) => theme.mediaQueries.sm} {
-    padding: 0 32px 32px;
+    padding: 0 24px 24px;
   }
 `
 
@@ -61,8 +65,9 @@ const Modal: React.FC<Props> = ({
   onBack,
   children,
   hideCloseButton = false,
+  background
 }) => (
-  <StyledModal>
+  <StyledModal background={background}>
     <ModalHeader>
       <ModalTitle>
         {onBack && (

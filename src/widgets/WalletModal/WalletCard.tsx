@@ -15,14 +15,15 @@ const StyledButton = styled(Button)`
   display: flex; 
   flex-direction: column;
   justify-content: space-around;
-  padding: 8px 0 0;
+  padding: 16px 0 8px;
   white-space: nowrap;
-  min-height: 91px;
+  min-height: 100px;
 `
 
 const StyledText = styled(Text)`
   font-weight: bold;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.contrast};
+  line-height: 20px;
 `
 
 const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
@@ -38,8 +39,8 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss }) => {
       }}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
-      <Icon width="32px" />
-      <StyledText>
+      <Icon width="40px" />
+      <StyledText small>
         {title}
       </StyledText>
     </StyledButton>

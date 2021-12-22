@@ -15,4 +15,5 @@ export interface AlertProps {
     children?: ReactNode;
     onClick?: (evt: MouseEvent<HTMLButtonElement>) => void;
     style?: React.CSSProperties;
+    index: number;
 }

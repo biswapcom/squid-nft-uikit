@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Arrow = styled.div`
+export const Arrow = styled.div<{isLight?: boolean}>`
   &,
   &::before {
     position: absolute;
@@ -13,20 +13,20 @@ export const Arrow = styled.div`
   &::before {
     content: "";
     transform: rotate(45deg);
-    background: ${({ theme }) => theme.tooltip.background};
+    background: ${({ theme, isLight }) => isLight ? '#FFFFFF' : theme.tooltip.background};
   }
 `;
 
-export const StyledTooltip = styled.div`
+export const StyledTooltip = styled.div<{isLight?: boolean}>`
   padding: 8px 16px;
   font-size: 16px;
   line-height: 130%;
   border-radius: 8px;
   max-width: 320px;
   z-index: 101;
-  background: ${({ theme }) => theme.tooltip.background};
+  background: ${({ theme,isLight }) => isLight ? '#FFFFFF' : theme.tooltip.background};
   color: ${({ theme }) => theme.tooltip.text};
-  box-shadow: ${({ theme }) => theme.tooltip.boxShadow};
+  box-shadow: ${({ theme, isLight }) => isLight ? 'none' : theme.tooltip.boxShadow};
 
   &[data-popper-placement^="top"] > ${Arrow} {
     bottom: -4px;

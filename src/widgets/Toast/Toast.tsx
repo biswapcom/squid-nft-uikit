@@ -6,7 +6,8 @@ import { Text } from "../../components/Text";
 import ToastAction from "./ToastAction";
 import { ToastProps, types } from "./types";
 import { Button } from "../../components/Button";
-import { LinkIcon } from "../../components/Svg";
+import {CloseIcon} from "../../components/Svg";
+import OpenInNew from "../../components/Svg/Icons/OpenInNew";
 
 const alertTypeMap = {
   [types.INFO]: alertVariants.INFO,
@@ -15,14 +16,16 @@ const alertTypeMap = {
   [types.WARNING]: alertVariants.WARNING,
 };
 
-interface ClearButtonProps {
-  top: number;
-}
 
-const ClearAllButton = styled(Button)<ClearButtonProps>`
-  position: absolute;
-  right: 0;
-  top: ${({top}) => `${-top}px`};
+const ClearAllButton = styled.button`
+  position: relative;
+  background-color: ${({theme}) => theme.colors.failure};
+  border: none;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `
 
 const StyledToast = styled.div`
@@ -32,27 +35,32 @@ const StyledToast = styled.div`
   max-width: calc(100% - 12px);
   transition: all 250ms ease-in;
   width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
-  box-shadow: 0px -4px 11px rgba(0, 0, 0, 0.1), 0px 20px 36px -8px rgba(14, 14, 44, 0.32), 0px 1px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
   border-radius: 16px;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     transform: none;
     left: auto;
     right: 35px;
-    max-width: 350px;
+    max-width: 270px;
   }
 `;
 
 const ProgressWrapper = styled.div`
   background-color: ${({theme})=> theme.colors.contrast}
   bottom: 0;
-  min-height: 5px;
+  min-height: 2px;
 `
 
 const ProgressLine = styled.div`
   background-color: ${({theme})=> theme.colors.success};
-  height: 5px;
+  height: 2px;
   transition: 100ms all;
   border-radius: 16px;
 `
@@ -61,17 +69,16 @@ const AlertWrapper = styled.div`
   padding: 0 16px;
 `
 const LinkWrapper = styled.div`
-  margin: 14px 0 11px 0;
+  margin: 8px 0;
   display: flex;
   align-items: center;
 `
 
 const LinkStyles = styled.a`
- color: ${({theme})=> theme.colors.primary};
+ color: #1EBB95;
  font-size: 14px;
  font-weight: 700;
- line-height: 21px;
-  text-decoration: underline;
+ line-height: 20px;
 `
 
 const SharingText = styled.div`
@@ -91,6 +98,7 @@ const Toast: React.FC<ToastProps> = ({
                                        handleMouseLeave,
                                        handleRemove,
                                        progress,
+                                       index,
                                        ...props
 }) => {
   const {
@@ -109,28 +117,27 @@ const Toast: React.FC<ToastProps> = ({
         {
           clearAll && (
             <ClearAllButton
-              variant='text'
-               top={removeButtonPosition}
               onClick={() => clearAll()}
             >
-              <Text fontSize='16px' color='#1263F1' lineHeight='19px'>
+              <Text fontSize='10px' color='contrast'>
                 Clear All
               </Text>
+                <CloseIcon color='contrast' ml='8px' width='10px'/>
             </ClearAllButton>
           )
         }
-        <Alert style={{padding: '16px 0 0 0'}} title={title} variant={alertTypeMap[type]} onClick={handleRemove}>
+        <Alert index={index} style={{padding: '16px 0 0 0'}} title={title} variant={alertTypeMap[type]} onClick={handleRemove}>
             <AlertWrapper>
-              {
+            {description ? <Text color="#6B7D98" fontSize="12px" as="p" dangerouslySetInnerHTML={{__html: description}}/> : <></>}
+            {
                 hash &&
                 <LinkWrapper>
                   <LinkStyles target="_blank" href={`https://bscscan.com/tx/${hash}`}>
-                    View on bscscan
+                    View on BscScan
                   </LinkStyles>
-                  <LinkIcon ml='7px' width='18px' height='18px' color='primary'/>
+                  <OpenInNew ml='7px' width='18px' height='18px' color='#1EBB95'/>
                 </LinkWrapper>
               }
-              {description ? <Text color="#6B7D98" fontSize="12px" as="p" mb="8px" dangerouslySetInnerHTML={{__html: description}}/> : <></>}
               {
                 telegramDescription && tweeterDescription && (
                   <ActionContainer>

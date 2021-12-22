@@ -11,5 +11,6 @@ export interface TooltipOptions {
     arrowPadding?: Padding;
     tooltipPadding?: Padding;
     tooltipOffset?: [number, number];
+    isLight?: boolean;
 }
 export declare type TriggerType = "click" | "hover" | "focus";

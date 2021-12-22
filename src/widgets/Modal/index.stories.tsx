@@ -23,12 +23,11 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onDismiss }) => (
 );
 
 const CustomModalWithBackground: React.FC<InjectedProps> = ({  onDismiss }) => (
-  <ModalWithBackground background='background' backBtnColor='contrast' onDismiss={onDismiss}>
+  <ModalWithBackground backBtnColor='contrast' p='0' onDismiss={onDismiss}>
       <div>
         <Button>This button Does nothing</Button>
       </div>
   </ModalWithBackground>
-
 );
 
 export const Default: React.FC = () => {
@@ -74,7 +73,7 @@ const BackButtonModal: React.FC<BackButtonModalProps> = ({ title, onDismiss }) =
 
   return (
     <Modal title={title} onDismiss={onDismiss} onBack={handleOnBack} hideCloseButton>
-      <Button onClick={onDismiss} variant="text" fullWidth>
+      <Button onClick={onDismiss} variant="text">
         Consumer can still close it.
       </Button>
     </Modal>
