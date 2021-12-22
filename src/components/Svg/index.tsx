@@ -92,6 +92,8 @@ export {default as AddFilledIcon} from './Icons/AddFilled'
 export {default as StarSharpIcon} from './Icons/StarSharp'
 export {default as SuccessIcon} from './Icons/Success'
 export {default as FailIcon} from './Icons/Fail'
+export {default as PlayIcon} from './Icons/Play'
+export {default as BswIcon} from './Icons/Bsw'
 
 
 export {default as FarmIcon} from './Icons/menu/Farm'

@@ -1,20 +1,23 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {DefaultTheme} from "styled-components";
 import Heading from "../../components/Heading/Heading";
 import Flex from "../../components/Box/Flex";
 import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { InjectedProps } from "./types";
+import getThemeValue from "../../util/getThemeValue";
+import {TextProps} from "../../components/Text";
 
 interface Props extends InjectedProps {
   title: string;
   hideCloseButton?: boolean;
   onBack?: () => void;
+  background?: string
 }
 
-const StyledModal = styled.div`
-  background-color: ${({ theme }) => theme.colors.tertiary};
-  border-radius: 16px 16px 0 0;  
+const StyledModal = styled.div<{background?: string}>`
+  background-color: ${({ theme, background }) => background || theme.colors.tertiary};
+  border-radius: 16px 16px 0 0;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
@@ -62,8 +65,9 @@ const Modal: React.FC<Props> = ({
   onBack,
   children,
   hideCloseButton = false,
+  background
 }) => (
-  <StyledModal>
+  <StyledModal background={background}>
     <ModalHeader>
       <ModalTitle>
         {onBack && (
