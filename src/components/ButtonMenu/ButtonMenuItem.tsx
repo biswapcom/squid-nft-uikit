@@ -21,7 +21,7 @@ const ButtonMenuItem: PolymorphicComponent<ButtonMenuItemProps, "button"> = ({
   isActive = false,
   variant = variants.PRIMARY,
   as,
-                                                                               line,
+  line,
   ...props
 }: ButtonMenuItemProps) => {
   if (!isActive) {
