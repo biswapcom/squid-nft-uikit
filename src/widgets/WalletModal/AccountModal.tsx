@@ -7,6 +7,7 @@ import Flex from "../../components/Box/Flex";
 import { Modal } from "../Modal";
 import CopyToClipboard from "./CopyToClipboard";
 import { useWalletModal } from "./index";
+import {useMatchBreakpoints} from "../../hooks";
 
 interface Props {
   account: string;
@@ -50,6 +51,8 @@ const CopyText = styled(Text)`
 const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, logout, onDismiss = () => null, login,recentTransaction,chainId,clearTransaction}) =>{
 
   const { onPresentConnectModal } = useWalletModal(login, logout, account,recentTransaction,chainId);
+  const {isXs, isSm} = useMatchBreakpoints()
+  const isMobile = isXs || isSm
 
   const changeWalletHandler = async () => {
     await onDismiss();
@@ -108,7 +111,7 @@ const AccountModal: React.FC<Props> = ({transactionsForUIKit, isSwap, account, l
             </TransactionWrapper>
           )
         }
-      <Flex>
+      <Flex mb={isMobile ? '64px' : '0'}>
         <Button
           style={{ width: '100%' }}
           mt='24px'
