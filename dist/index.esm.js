@@ -1885,7 +1885,7 @@ var Alert = function (_a) {
             typeof children === "string" ? React.createElement(Description, null, children) : children),
         onClick && (React.createElement(CloseHandler, null,
             React.createElement(IconButton, { scale: "sm", variant: "text", onClick: onClick },
-                React.createElement(Icon$1G, { width: "14px", color: "background" }))))));
+                React.createElement(Icon$1G, { width: "20px", color: "background" }))))));
 };
 var templateObject_1$E, templateObject_2$l, templateObject_3$a, templateObject_4$7, templateObject_5$4;
 
