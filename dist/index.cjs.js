@@ -1897,7 +1897,7 @@ var Alert = function (_a) {
             typeof children === "string" ? React__default["default"].createElement(Description, null, children) : children),
         onClick && (React__default["default"].createElement(CloseHandler, null,
             React__default["default"].createElement(IconButton, { scale: "sm", variant: "text", onClick: onClick },
-                React__default["default"].createElement(Icon$1G, { width: "14px", color: "background" }))))));
+                React__default["default"].createElement(Icon$1G, { width: "20px", color: "background" }))))));
 };
 var templateObject_1$E, templateObject_2$l, templateObject_3$a, templateObject_4$7, templateObject_5$4;
 

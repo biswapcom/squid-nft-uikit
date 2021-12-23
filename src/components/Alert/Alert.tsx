@@ -121,7 +121,7 @@ const Alert: React.FC<AlertProps> = ({style, title, children, variant, onClick, 
       {onClick && (
         <CloseHandler>
           <IconButton scale="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="14px" color="background" />
+            <CloseIcon width="20px" color="background" />
           </IconButton>
         </CloseHandler>
       )}
