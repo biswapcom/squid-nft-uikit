@@ -3750,11 +3750,14 @@ var ModalProvider = function (_a) {
     var _b = useState(false), isOpen = _b[0], setIsOpen = _b[1];
     var _c = useState(), modalNode = _c[0], setModalNode = _c[1];
     var _d = useState(true), closeOnOverlayClick = _d[0], setCloseOnOverlayClick = _d[1];
+    var bodyStyle = document.body.style;
     var handlePresent = function (node) {
+        bodyStyle.overflow = 'hidden';
         setModalNode(node);
         setIsOpen(true);
     };
     var handleDismiss = function () {
+        bodyStyle.overflow = 'auto';
         setModalNode(undefined);
         setIsOpen(false);
     };
