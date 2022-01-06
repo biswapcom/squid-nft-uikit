@@ -36,13 +36,18 @@ const ModalProvider: React.FC = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalNode, setModalNode] = useState<React.ReactNode>();
   const [closeOnOverlayClick, setCloseOnOverlayClick] = useState(true);
+  const bodyStyle = document.body.style;
 
   const handlePresent = (node: React.ReactNode) => {
+    bodyStyle.overflow = 'hidden';
+
     setModalNode(node);
     setIsOpen(true);
   };
 
   const handleDismiss = () => {
+    bodyStyle.overflow = 'auto';
+
     setModalNode(undefined);
     setIsOpen(false);
   };
