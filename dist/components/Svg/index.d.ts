@@ -94,6 +94,7 @@ export { default as SuccessIcon } from './Icons/Success';
 export { default as FailIcon } from './Icons/Fail';
 export { default as PlayIcon } from './Icons/Play';
 export { default as BswIcon } from './Icons/Bsw';
+export { default as RewardIcon } from './Icons/Reward';
 export { default as FarmIcon } from './Icons/menu/Farm';
 export { default as PoolIcon } from './Icons/menu/Pool';
 export { default as NFTIcon } from './Icons/menu/NftNew';
