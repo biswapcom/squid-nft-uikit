@@ -6,6 +6,7 @@ import WalletConnect from "./icons/WalletConnect";
 import BinanceChain from "./icons/BinanceChain";
 import SafePalWallet from "./icons/SafePalWallet";
 import Coin98 from "./icons/Coin98";
+import CoinbaseIcon from "./icons/Coinbase";
 
 import { Config, ConnectorNames } from "./types";
 
@@ -55,6 +56,12 @@ const connectors: Config[] = [
   {
     title: "SafePal Wallet",
     icon: SafePalWallet,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+  {
+    title: "Coinbase",
+    icon: CoinbaseIcon,
     connectorId: ConnectorNames.Injected,
     priority: 999,
   },
