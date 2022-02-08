@@ -65,6 +65,12 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
     priority: 999,
   },
+  {
+    title: "Huobi",
+    icon: CoinbaseIcon,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
 ];
 
 export default connectors;
