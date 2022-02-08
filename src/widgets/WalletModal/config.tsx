@@ -68,7 +68,7 @@ const connectors: Config[] = [
   {
     title: "Huobi",
     icon: CoinbaseIcon,
-    connectorId: ConnectorNames.WalletConnect,
+    connectorId: ConnectorNames.Injected,
     priority: 999,
   },
 ];

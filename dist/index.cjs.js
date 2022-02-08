@@ -4170,7 +4170,7 @@ var connectors = [
     {
         title: "Huobi",
         icon: Icon,
-        connectorId: exports.ConnectorNames.WalletConnect,
+        connectorId: exports.ConnectorNames.Injected,
         priority: 999,
     },
 ];
