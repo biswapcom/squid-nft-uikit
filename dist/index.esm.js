@@ -4160,12 +4160,6 @@ var connectors = [
         connectorId: ConnectorNames.Injected,
         priority: 999,
     },
-    {
-        title: "Huobi",
-        icon: Icon,
-        connectorId: ConnectorNames.WalletConnect,
-        priority: 999,
-    },
 ];
 var connectorLocalStorageKey = "connectorId";
 var walletLocalStorageKey = "wallet";
