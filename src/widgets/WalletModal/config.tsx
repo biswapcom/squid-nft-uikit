@@ -67,7 +67,7 @@ const connectors: Config[] = [
     priority: 999,
   },
   {
-    title: "Huobi",
+    title: "Huobi Wallet",
     icon: HuobiWallet,
     connectorId: ConnectorNames.Injected,
     priority: 999,
