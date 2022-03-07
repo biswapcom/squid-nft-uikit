@@ -7,6 +7,7 @@ import BinanceChain from "./icons/BinanceChain";
 import SafePalWallet from "./icons/SafePalWallet";
 import Coin98 from "./icons/Coin98";
 import CoinbaseIcon from "./icons/Coinbase";
+import HuobiWallet from "./icons/HuobiWallet";
 
 import { Config, ConnectorNames } from "./types";
 
@@ -62,6 +63,12 @@ const connectors: Config[] = [
   {
     title: "Coinbase",
     icon: CoinbaseIcon,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+  {
+    title: "Huobi Wallet",
+    icon: HuobiWallet,
     connectorId: ConnectorNames.Injected,
     priority: 999,
   },
