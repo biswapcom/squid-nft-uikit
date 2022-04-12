@@ -4175,7 +4175,7 @@ var connectors = [
         priority: 999,
     },
     {
-        title: "Coinbase",
+        title: "Coinbase Wallet",
         icon: Icon$1,
         connectorId: exports.ConnectorNames.Injected,
         priority: 999,
