@@ -2,13 +2,15 @@ import React, { cloneElement, ElementType, isValidElement } from "react";
 import getExternalLinkProps from "../../util/getExternalLinkProps";
 import StyledButton from "./StyledButton";
 import { ButtonProps, scales, variants } from "./types";
+import {LoaderIcon} from "../Svg";
 
 const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.Element => {
-  const { startIcon, endIcon, external, className, isLoading, disabled, children, line, ...rest } = props;
+  const { startIcon, endIcon, external, className, isLoading, disabled, children, line, loadingTitle, ...rest } = props;
   const internalProps = external ? getExternalLinkProps() : {};
   const isDisabled = isLoading || disabled;
   const classNames = className ? [className] : [];
-
+  const loadingText = loadingTitle ?? 'Loading...'
+  const endIconElement = isLoading ? <LoaderIcon color='contrast' /> : endIcon
   if (isLoading) {
     classNames.push("biswap-button--loading");
   }
@@ -31,9 +33,9 @@ const Button = <E extends ElementType = "button">(props: ButtonProps<E>): JSX.El
           cloneElement(startIcon, {
             mr: "0.5rem",
           })}
-        {children}
-        {isValidElement(endIcon) &&
-          cloneElement(endIcon, {
+        {isLoading ? loadingText : children}
+        {isValidElement(endIconElement) &&
+          cloneElement(endIconElement, {
             ml: "0.5rem",
           })}
       </>

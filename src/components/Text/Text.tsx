@@ -23,6 +23,7 @@ const Text = styled.span<TextProps>`
   font-weight: ${({ bold }) => (bold ? 600 : 400)};
   line-height: ${({ lineHeight }) => lineHeight || "1.5"};
   ${({ textTransform }) => textTransform && `text-transform: ${textTransform};`}
+  ${({ nowrap }) => nowrap && 'white-space: nowrap'};
   ${space}
   ${typography}
 `;

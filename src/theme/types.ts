@@ -47,6 +47,7 @@ export type Colors = {
   dark: string;
   gray: string;
   light: string;
+  grizzly: string
 
   // Gradients
   gradients: Gradients;
