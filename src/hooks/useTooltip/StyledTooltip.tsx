@@ -17,14 +17,14 @@ export const Arrow = styled.div<{isLight?: boolean}>`
   }
 `;
 
-export const StyledTooltip = styled.div<{isLight?: boolean}>`
+export const StyledTooltip = styled.div<{isLight?: boolean, maxWidth?: string}>`
   padding: 8px 16px;
   font-size: 16px;
   line-height: 130%;
   border-radius: 8px;
-  max-width: 320px;
+  max-width: ${({maxWidth}) => maxWidth ?? '360px'} ;
   z-index: 101;
-  background: ${({ theme,isLight }) => isLight ? '#FFFFFF' : theme.tooltip.background};
+  background: ${({ theme, isLight }) => theme.tooltip[isLight ? 'contrast' : 'background']};
   color: ${({ theme }) => theme.tooltip.text};
   box-shadow: ${({ theme, isLight }) => isLight ? 'none' : theme.tooltip.boxShadow};
 

@@ -3489,11 +3489,13 @@ var dark$1 = {
 
 var light = {
     background: lightColors.card,
+    contrast: lightColors.contrast,
     text: lightColors.light,
     boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)",
 };
 var dark = {
     background: darkColors.card,
+    contrast: darkColors.contrast,
     text: darkColors.light,
     boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.2), 0px 4px 12px -8px rgba(14, 14, 44, 0.1)",
 };
@@ -3510,9 +3512,12 @@ var Arrow = styled__default["default"].div(templateObject_1$c || (templateObject
     var theme = _a.theme, isLight = _a.isLight;
     return isLight ? '#FFFFFF' : theme.tooltip.background;
 });
-var StyledTooltip = styled__default["default"].div(templateObject_2$8 || (templateObject_2$8 = __makeTemplateObject(["\n  padding: 8px 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 8px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 8px 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 8px;\n  max-width: 320px;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
+var StyledTooltip = styled__default["default"].div(templateObject_2$8 || (templateObject_2$8 = __makeTemplateObject(["\n  padding: 8px 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 8px;\n  max-width: ", " ;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"], ["\n  padding: 8px 16px;\n  font-size: 16px;\n  line-height: 130%;\n  border-radius: 8px;\n  max-width: ", " ;\n  z-index: 101;\n  background: ", ";\n  color: ", ";\n  box-shadow: ", ";\n\n  &[data-popper-placement^=\"top\"] > ", " {\n    bottom: -4px;\n  }\n\n  &[data-popper-placement^=\"bottom\"] > ", " {\n    top: -4px;\n  }\n\n  &[data-popper-placement^=\"left\"] > ", " {\n    right: -4px;\n  }\n\n  &[data-popper-placement^=\"right\"] > ", " {\n    left: -4px;\n  }\n"])), function (_a) {
+    var maxWidth = _a.maxWidth;
+    return maxWidth !== null && maxWidth !== void 0 ? maxWidth : '360px';
+}, function (_a) {
     var theme = _a.theme, isLight = _a.isLight;
-    return isLight ? '#FFFFFF' : theme.tooltip.background;
+    return theme.tooltip[isLight ? 'contrast' : 'background'];
 }, function (_a) {
     var theme = _a.theme;
     return theme.tooltip.text;
@@ -3524,7 +3529,7 @@ var templateObject_1$c, templateObject_2$8;
 
 var portalRoot = document.getElementById("portal-root");
 var useTooltip = function (content, options) {
-    var _a = options.placement, placement = _a === void 0 ? "auto" : _a, _b = options.trigger, trigger = _b === void 0 ? "hover" : _b, _c = options.arrowPadding, arrowPadding = _c === void 0 ? 16 : _c, _d = options.tooltipPadding, tooltipPadding = _d === void 0 ? { left: 16, right: 16 } : _d, _e = options.tooltipOffset, tooltipOffset = _e === void 0 ? [0, 10] : _e, _f = options.isLight, isLight = _f === void 0 ? false : _f;
+    var _a = options.placement, placement = _a === void 0 ? "auto" : _a, _b = options.trigger, trigger = _b === void 0 ? "hover" : _b, _c = options.arrowPadding, arrowPadding = _c === void 0 ? 16 : _c, _d = options.tooltipPadding, tooltipPadding = _d === void 0 ? { left: 16, right: 16 } : _d, _e = options.tooltipOffset, tooltipOffset = _e === void 0 ? [0, 10] : _e, _f = options.isLight, isLight = _f === void 0 ? true : _f, maxWidth = options.maxWidth;
     var _g = React.useState(null), targetElement = _g[0], setTargetElement = _g[1];
     var _h = React.useState(null), tooltipElement = _h[0], setTooltipElement = _h[1];
     var _j = React.useState(null), arrowElement = _j[0], setArrowElement = _j[1];
@@ -3662,7 +3667,7 @@ var useTooltip = function (content, options) {
             { name: "preventOverflow", options: { padding: tooltipPadding } },
         ],
     }), styles = _l.styles, attributes = _l.attributes;
-    var tooltip = (React__default["default"].createElement(StyledTooltip, __assign({ isLight: isLight, ref: setTooltipElement, style: styles.popper }, attributes.popper),
+    var tooltip = (React__default["default"].createElement(StyledTooltip, __assign({ maxWidth: maxWidth, isLight: isLight, ref: setTooltipElement, style: styles.popper }, attributes.popper),
         React__default["default"].createElement(styled.ThemeProvider, { theme: darkTheme }, content),
         React__default["default"].createElement(Arrow, { isLight: isLight, ref: setArrowElement, style: styles.arrow })));
     var tooltipInPortal = portalRoot ? reactDom.createPortal(tooltip, portalRoot) : null;
