@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import { usePopper } from "react-popper";
-import { ThemeProvider, DefaultTheme } from "styled-components";
-import { light, dark } from "../../theme";
+import { ThemeProvider } from "styled-components";
+import { dark } from "../../theme";
 import isTouchDevice from "../../util/isTouchDevice";
 import { StyledTooltip, Arrow } from "./StyledTooltip";
 import { TooltipOptions, TooltipRefs } from "./types";
@@ -16,7 +16,8 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
     arrowPadding = 16,
     tooltipPadding = { left: 16, right: 16 },
     tooltipOffset = [0, 10],
-    isLight = false
+    isLight = true,
+    maxWidth
   } = options;
   const [targetElement, setTargetElement] = useState<HTMLElement | null>(null);
   const [tooltipElement, setTooltipElement] = useState<HTMLElement | null>(null);
@@ -178,7 +179,7 @@ const useTooltip = (content: React.ReactNode, options: TooltipOptions): TooltipR
   });
 
   const tooltip = (
-    <StyledTooltip isLight={isLight} ref={setTooltipElement} style={styles.popper} {...attributes.popper}>
+    <StyledTooltip maxWidth={maxWidth} isLight={isLight} ref={setTooltipElement} style={styles.popper} {...attributes.popper}>
       <ThemeProvider theme={dark}>{content}</ThemeProvider>
       <Arrow isLight={isLight} ref={setArrowElement} style={styles.arrow} />
     </StyledTooltip>

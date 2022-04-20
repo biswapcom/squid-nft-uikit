@@ -33,7 +33,7 @@ const ExpandableCard = styled.div`
   padding: 0 10px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: rgba(70, 70, 80, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(70, 70, 80, 0.2) 0 7px 29px 0;
 `;
 
 const ExpandableHeader = styled.div`
@@ -52,13 +52,11 @@ export const Placement: React.FC = () => {
   // Trigger doesn't matter in this story, it just shows tooltips no matter what
   // TOP
   const { targetRef: targetRefTopStart, tooltip: tooltipTopStart } = useTooltip("top-start", {
-    placement: "top-start",
-      isLight: true
+    placement: "top-start"
   });
   const { targetRef: targetRefTop, tooltip: tooltipTop } = useTooltip("top", { placement: "top" });
   const { targetRef: targetRefTopEnd, tooltip: tooltipTopEnd } = useTooltip("top-end", {
-    placement: "top-end",
-      isLight: true
+    placement: "top-end"
   });
   // LEFT
   const { targetRef: targetRefLeftStart, tooltip: tooltipLeftStart } = useTooltip("left-start", {
