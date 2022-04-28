@@ -6,4 +6,5 @@ export interface TextProps extends SpaceProps, TypographyProps {
     small?: boolean;
     textTransform?: "uppercase" | "lowercase" | "capitalize";
     lineHeight?: string;
+    nowrap?: boolean;
 }

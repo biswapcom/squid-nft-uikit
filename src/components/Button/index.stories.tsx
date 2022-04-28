@@ -119,9 +119,6 @@ export const Variants: React.FC = () => {
           <Button isLoading endIcon={<AutoRenewIcon spin color="currentColor" />}>
             Approving
           </Button>
-          <Button isLoading variant="success">
-            Approving
-          </Button>
         </Row>
         <Row>
           <Button startIcon={<LogoIcon />}>Start Icon</Button>
@@ -136,14 +133,6 @@ export const Variants: React.FC = () => {
           </IconButton>
           <IconButton variant="secondary">
             <AddIcon />
-          </IconButton>
-        </Row>
-        <Row>
-          <IconButton scale="sm" variant="danger">
-            <LogoIcon />
-          </IconButton>
-          <IconButton scale="sm" variant="success">
-            <AddIcon color="currentColor" />
           </IconButton>
         </Row>
       </BrowserRouter>
