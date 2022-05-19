@@ -4,9 +4,10 @@ import { Link } from "../../components/Link";
 import { HelpIcon } from "../../components/Svg";
 import { Modal } from "../Modal";
 import WalletCard from "./WalletCard";
-import config, { walletLocalStorageKey } from "./config";
+import {connectors, connectorsMobile, walletLocalStorageKey} from "./config";
 import { Config, Login } from "./types";
 import Flex from "../../components/Box/Flex";
+import isTouchDevice from "../../util/isTouchDevice";
 
 interface Props {
   login: Login;
@@ -61,7 +62,7 @@ const getPreferredConfig = (walletConfig: Config[]) => {
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
 
-  const sortedConfig = getPreferredConfig(config);
+  const sortedConfig = getPreferredConfig(isTouchDevice() ? connectorsMobile : connectors);
 
   return (
       <Modal title="Connect to a wallet" onDismiss={onDismiss}>

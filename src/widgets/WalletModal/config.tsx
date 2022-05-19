@@ -11,7 +11,70 @@ import HuobiWallet from "./icons/HuobiWallet";
 
 import { Config, ConnectorNames } from "./types";
 
-const connectors: Config[] = [
+export const connectors: Config[] = [
+  {
+    title: "Metamask",
+    icon: Metamask,
+    connectorId: ConnectorNames.Injected,
+    priority: 1,
+  },
+  {
+    title: "TrustWallet",
+    icon: TrustWallet,
+    connectorId: ConnectorNames.WalletConnect,
+    priority: 2,
+  },
+  {
+    title: "MathWallet",
+    icon: MathWallet,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+  {
+    title: "TokenPocket",
+    icon: TokenPocket,
+    connectorId: ConnectorNames.Injected,
+    priority: 4
+  },
+  {
+    title: "Coin98",
+    icon: Coin98,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+  {
+    title: "WalletConnect",
+    icon: WalletConnect,
+    connectorId: ConnectorNames.WalletConnect,
+    priority: 3,
+  },
+  {
+    title: "Binance Chain",
+    icon: BinanceChain,
+    connectorId: ConnectorNames.BSC,
+    priority: 999,
+  },
+  {
+    title: "SafePal Wallet",
+    icon: SafePalWallet,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+  {
+    title: "Coinbase Wallet",
+    icon: CoinbaseIcon,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+  {
+    title: "Huobi Wallet",
+    icon: HuobiWallet,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
+];
+
+export const connectorsMobile: Config[] = [
   {
     title: "Metamask",
     icon: Metamask,
@@ -74,6 +137,5 @@ const connectors: Config[] = [
   },
 ];
 
-export default connectors;
 export const connectorLocalStorageKey = "connectorId";
 export const walletLocalStorageKey = "wallet";
