@@ -4155,6 +4155,68 @@ var connectors = [
     {
         title: "TrustWallet",
         icon: Icon$6,
+        connectorId: exports.ConnectorNames.WalletConnect,
+        priority: 2,
+    },
+    {
+        title: "MathWallet",
+        icon: Icon$8,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 999,
+    },
+    {
+        title: "TokenPocket",
+        icon: Icon$7,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 4
+    },
+    {
+        title: "Coin98",
+        icon: Icon$2,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 999,
+    },
+    {
+        title: "WalletConnect",
+        icon: Icon$5,
+        connectorId: exports.ConnectorNames.WalletConnect,
+        priority: 3,
+    },
+    {
+        title: "Binance Chain",
+        icon: Icon$4,
+        connectorId: exports.ConnectorNames.BSC,
+        priority: 999,
+    },
+    {
+        title: "SafePal Wallet",
+        icon: Icon$3,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 999,
+    },
+    {
+        title: "Coinbase Wallet",
+        icon: Icon$1,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 999,
+    },
+    {
+        title: "Huobi Wallet",
+        icon: Icon,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 999,
+    },
+];
+var connectorsMobile = [
+    {
+        title: "Metamask",
+        icon: Icon$9,
+        connectorId: exports.ConnectorNames.Injected,
+        priority: 1,
+    },
+    {
+        title: "TrustWallet",
+        icon: Icon$6,
         connectorId: exports.ConnectorNames.Injected,
         priority: 2,
     },
@@ -4254,7 +4316,7 @@ var getPreferredConfig = function (walletConfig) {
 };
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
-    var sortedConfig = getPreferredConfig(connectors);
+    var sortedConfig = getPreferredConfig(isTouchDevice() ? connectorsMobile : connectors);
     return (React__default["default"].createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
         React__default["default"].createElement(Wrapper, null,
             React__default["default"].createElement(WalletCardsWrapper, null, sortedConfig.map(function (entry) { return (React__default["default"].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss })); })),
