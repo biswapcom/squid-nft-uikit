@@ -4188,7 +4188,7 @@ var connectors = [
         priority: 999,
     },
     {
-        title: "Huobi Wallet",
+        title: "iToken",
         icon: Icon,
         connectorId: ConnectorNames.Injected,
         priority: 999,
