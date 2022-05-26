@@ -67,8 +67,8 @@ export const connectors: Config[] = [
     priority: 999,
   },
   {
-    title: "Huobi Wallet",
-    icon: HuobiWallet,
+    title: "iToken",
+    icon: iToken,
     connectorId: ConnectorNames.Injected,
     priority: 999,
   },
