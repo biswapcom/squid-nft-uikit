@@ -4241,7 +4241,8 @@ var getPreferredConfig = function (walletConfig) {
 };
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
-    var sortedConfig = getPreferredConfig(connectors);
+    var isMobile = useMatchBreakpoints().isMobile;
+    var sortedConfig = useMemo(function () { return getPreferredConfig(isMobile ? connectors.map(function (item) { return item.title === 'TrustWallet' ? __assign(__assign({}, item), { connectorId: ConnectorNames.Injected }) : item; }) : connectors); }, [isMobile]);
     return (React.createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
         React.createElement(Wrapper, null,
             React.createElement(WalletCardsWrapper, null, sortedConfig.map(function (entry) { return (React.createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss })); })),
