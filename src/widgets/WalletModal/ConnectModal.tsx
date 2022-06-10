@@ -61,9 +61,20 @@ const getPreferredConfig = (walletConfig: Config[]) => {
 };
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => {
-
-  const { isMobile } = useMatchBreakpoints()
-  const sortedConfig = useMemo(() => getPreferredConfig(isMobile ? config.map(item => item.title === 'TrustWallet' ? { ...item, connectorId: ConnectorNames.Injected } : item) : config), [isMobile]);
+  const { isMobile } = useMatchBreakpoints();
+  const sortedConfig = useMemo(
+    () =>
+      getPreferredConfig(
+        isMobile
+          ? config.map((item) =>
+            item.title === "TrustWallet"
+              ? { ...item, connectorId: ConnectorNames.Injected }
+              : item
+          )
+          : config
+      ),
+    [isMobile]
+  );
 
   return (
       <Modal title="Connect to a wallet" onDismiss={onDismiss}>
