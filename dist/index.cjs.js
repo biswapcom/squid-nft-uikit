@@ -3308,7 +3308,7 @@ var useMatchBreakpoints = function () {
             });
         };
     }, [setState]);
-    return state;
+    return __assign(__assign({}, state), { isMobile: state.isXs || state.isSm, isTablet: state.isMd || state.isLg, isDesktop: state.isXl || state.isXll || state.isXxl });
 };
 
 var defaultParticleOptions = {
@@ -4266,7 +4266,14 @@ var getPreferredConfig = function (walletConfig) {
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b;
     var isMobile = useMatchBreakpoints().isMobile;
-    var sortedConfig = React.useMemo(function () { return getPreferredConfig(isMobile ? connectors.map(function (item) { return item.title === 'TrustWallet' ? __assign(__assign({}, item), { connectorId: exports.ConnectorNames.Injected }) : item; }) : connectors); }, [isMobile]);
+    var sortedConfig = React.useMemo(function () {
+        return getPreferredConfig(isMobile
+            ? connectors.map(function (item) {
+                return item.title === "TrustWallet"
+                    ? __assign(__assign({}, item), { connectorId: exports.ConnectorNames.Injected }) : item;
+            })
+            : connectors);
+    }, [isMobile]);
     return (React__default["default"].createElement(Modal, { title: "Connect to a wallet", onDismiss: onDismiss },
         React__default["default"].createElement(Wrapper, null,
             React__default["default"].createElement(WalletCardsWrapper, null, sortedConfig.map(function (entry) { return (React__default["default"].createElement(WalletCard, { key: entry.title, login: login, walletConfig: entry, onDismiss: onDismiss })); })),
