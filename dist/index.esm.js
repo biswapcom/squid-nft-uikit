@@ -3296,7 +3296,7 @@ var useMatchBreakpoints = function () {
             });
         };
     }, [setState]);
-    return state;
+    return __assign(__assign({}, state), { isMobile: state.isXs || state.isSm, isTablet: state.isMd || state.isLg, isDesktop: state.isXl || state.isXll || state.isXxl });
 };
 
 var defaultParticleOptions = {
