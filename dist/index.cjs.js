@@ -4142,6 +4142,7 @@ exports.ConnectorNames = void 0;
     ConnectorNames["Injected"] = "injected";
     ConnectorNames["WalletConnect"] = "walletconnect";
     ConnectorNames["BSC"] = "bsc";
+    ConnectorNames["WalletLink"] = "walletlink";
 })(exports.ConnectorNames || (exports.ConnectorNames = {}));
 
 var connectors = [
