@@ -8,6 +8,7 @@ import SafePalWallet from "./icons/SafePalWallet";
 import Coin98 from "./icons/Coin98";
 import CoinbaseIcon from "./icons/Coinbase";
 import iToken from "./icons/iToken";
+import BitKeepWallet from "./icons/BitKeepWallet";
 
 import { Config, ConnectorNames } from "./types";
 
@@ -21,7 +22,7 @@ const connectors: Config[] = [
   {
     title: "TrustWallet",
     icon: TrustWallet,
-    connectorId: ConnectorNames.Injected,
+    connectorId: ConnectorNames.WalletConnect,
     priority: 2,
   },
   {
@@ -72,8 +73,14 @@ const connectors: Config[] = [
     connectorId: ConnectorNames.Injected,
     priority: 999,
   },
+  {
+    title: "BitKeep Wallet",
+    icon: BitKeepWallet,
+    connectorId: ConnectorNames.Injected,
+    priority: 999,
+  },
 ];
 
-export default connectors;
+export default connectors
 export const connectorLocalStorageKey = "connectorId";
 export const walletLocalStorageKey = "wallet";
