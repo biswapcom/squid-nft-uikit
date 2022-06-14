@@ -4136,6 +4136,7 @@ var ConnectorNames;
     ConnectorNames["Injected"] = "injected";
     ConnectorNames["WalletConnect"] = "walletconnect";
     ConnectorNames["BSC"] = "bsc";
+    ConnectorNames["WalletLink"] = "walletlink";
 })(ConnectorNames || (ConnectorNames = {}));
 
 var connectors = [
